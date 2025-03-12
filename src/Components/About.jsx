@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaPython, FaJsSquare } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const text = "I am a Full Stack Developer.";
@@ -36,7 +36,7 @@ function About() {
   }, [index, isDeleting]);
 
   return (
-    <div className="flex flex-col-1 md:flex-col-2  h-fit mb-9 w-full pt-28">
+    <div className="md:flex md:flex-col-2 md:px-24 h-fit mb-9 w-full pt-16 md:pt-36 pb-24">
       {/* fa-icons in bg */}
       <motion.div
         animate={{
@@ -67,10 +67,11 @@ function About() {
       </motion.div>
 
       {/* about starts */}
-      <div className="flex-1 p-12 my-auto">
+      <div className="md:flex-1 p-12 my-auto">
         <h2 className="text-3xl text-[#A9B5DF] font-semibold">Hello!!</h2>
-        <h1 className="text-5xl text-[#FFF2F2] font-bold my-1">
-          My name is <span className="text-6xl">Vranda Garg</span> ..
+        <h1 className="text-4xl md:text-5xl text-[#FFF2F2] font-bold my-1">
+          My name is <span className="text-5xl md:text-6xl">Vranda Garg</span>{" "}
+          ..
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -86,7 +87,7 @@ function About() {
           animation and video editing.
         </p>
       </div>
-      <div className="mx-20 flex-1 relative">
+      <div className="mx-11 md:mx-20 md:flex-1 relative">
         {/* Background Layers */}
         <div className="absolute inset-0 mx-10 flex flex-col">
           <div className="bg-transparent w-full h-[20%]"></div>
@@ -112,11 +113,11 @@ function About() {
         ></motion.div>
 
         {/* Image Wrapper */}
-        <div className="relative z-20 flex justify-center items-center pt-7">
+        <div className="relative  z-20 flex justify-center items-center pt-7">
           <img
             src="/download.png"
             alt="Vranda Garg"
-            className="h-auto max-h-[450px] w-auto object-cover"
+            className=" h-[270px] md:h-[450px] w-auto object-cover"
           />
         </div>
       </div>

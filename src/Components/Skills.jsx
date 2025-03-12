@@ -111,7 +111,7 @@ const Skills = () => {
       <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFF2F2]">
         Skills
       </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6 px-24 justify-center items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 p-6 md:px-24 justify-center items-center">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
