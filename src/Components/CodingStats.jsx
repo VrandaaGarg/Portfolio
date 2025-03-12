@@ -30,7 +30,7 @@ function CodingStats() {
                   className="h-28 w-28 md:w-44 md:h-44 rounded-full mx-auto"
                 />
 
-                <p>@{githubData.login}</p>
+                <p>@VrandaaGarg</p>
               </div>
               <div className="flex-1 bg-[#7886C7]/20 border-[#A9B5DF] border-1 min-h-44 md:min-h-60 rounded-xl md:rounded-3xl flex flex-col justify-center items-center gap-4">
                 <h2 className="text-lg md:text-2xl font-bold text-left">
