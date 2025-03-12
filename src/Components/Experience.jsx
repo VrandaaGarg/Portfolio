@@ -10,13 +10,40 @@ const experience = [
     technologies: ["React", "Tailwind CSS", "Javascript", "Github"],
     logo: "/Randomize.ico",
   },
+  {
+    role: "Certificate of Excellence",
+    company: "Manipal University Jaipur",
+    duration: "November-2024",
+    description:
+      "I was awarded the Certificate of Excellence for securing the 9.89 gpa in my 2nd semester of B.Tech in Computer Science and Engineering.",
+    technologies: [],
+    logo: "/deanList2sem.jpg",
+  },
+  {
+    role: "BrandIT",
+    company: "IEEE",
+    duration: "july 2024",
+    description:
+      "I secured 3rd position in the BrandIT competition organized by IEEE, where I developed a website named EvoVatika ",
+    technologies: ["React", "Tailwind CSS", "Javascript", "HTML", "CSS"],
+    logo: "/BrandIT.jpeg",
+  },
+  {
+    role: "Certificate of Excellence",
+    company: "Manipal University Jaipur",
+    duration: "April-2024",
+    description:
+      "I was awarded the Certificate of Excellence for securing the 9.83 gpa in my 1st semester of B.Tech in Computer Science and Engineering.",
+    technologies: [],
+    logo: "/deanList1sem.jpeg",
+  },
 ];
 
 export default function Experince() {
   return (
-    <div className="max-w-5xl mx-auto p-6">
-      <h2 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFF2F2]">
-        Work Experience
+    <div className="max-w-6xl mx-auto p-6">
+      <h2 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
+        Experience/ Achievement
       </h2>
       <div className="">
         {experience.map((exp, index) => (
@@ -28,7 +55,7 @@ export default function Experince() {
               viewport={{ once: true }}
               className="flex flex-col items-center justify-center mx-5"
             >
-              <div className="h-8 w-8 rounded-full bg-[#7886C7]"></div>
+              <div className="h-8 w-8 rounded-full bg-gradient-to-r from-[#ffe493] to-[#FFC20D]"></div>
               <div className="h-full w-1 bg-white/80"></div>
             </motion.div>
             <div className="mb-8 mt-3">
@@ -39,10 +66,10 @@ export default function Experince() {
                 whileHover={{ scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#7886C7]/10 border-[#FFF2F2]/50 py-9"
+                className="flex items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#141414]/40 border-[#FFF2F2]/50 py-9"
               >
                 {/* Logo */}
-                <div className="w-16 h-16 flex-shrink-0">
+                <div className="w-36 h-36 flex-shrink-0">
                   <img
                     src={exp.logo}
                     alt={exp.company}
@@ -52,16 +79,16 @@ export default function Experince() {
 
                 {/* Details */}
                 <div>
-                  <h3 className="text-xl font-semibold text-[#FFF2F2]">
+                  <h3 className="text-xl font-semibold text-[#FAFAF9]">
                     {exp.role} - {exp.company}
                   </h3>
-                  <p className="text-gray-300 text-sm">{exp.duration}</p>
-                  <p className="text-gray-400 mt-2">{exp.description}</p>
+                  <p className="text-[#FFD557] text-sm">{exp.duration}</p>
+                  <p className="text-[#FAFAF9]/60 mt-2">{exp.description}</p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {exp.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 text-xs rounded-md text-white bg-gradient-to-r from-[#A9B5DF]/50 to-[#7886C7]/50"
+                        className="px-2 py-1 font-semibold text-xs rounded-md text-[#161616] bg-gradient-to-r from-[#FFD557]/95 to-[#FFC20D]/95"
                       >
                         {tech}
                       </span>

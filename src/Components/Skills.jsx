@@ -77,7 +77,7 @@ const skills = [
   {
     name: "Django",
     icon: <SiDjango />,
-    bgColor: "#092E20",
+    bgColor: "#037514",
   },
   {
     name: "Node.js",
@@ -87,7 +87,7 @@ const skills = [
   {
     name: "Express",
     icon: <SiExpress />,
-    bgColor: "#303030",
+    bgColor: "#030303",
   },
   {
     name: "MongoDB",
@@ -108,7 +108,7 @@ const skills = [
 const Skills = () => {
   return (
     <div className="">
-      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFF2F2]">
+      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
         Skills
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 p-6 md:px-24 justify-center items-center">
@@ -117,7 +117,7 @@ const Skills = () => {
             key={index}
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
-            className="flex flex-col items-center bg-[#A9B5DF]/30 border-[#A9B5DF] border-1 justify-center p-4 rounded-xl shadow-lg cursor-pointer"
+            className="flex flex-col items-center bg-[#FFC20D]/5 hover:shadow-amber-100/5 hover:bg-[#FFD557]/10 border-[#FAF7E7] border-1 justify-center p-4 rounded-xl shadow-lg cursor-pointer"
           >
             <motion.div
               key={index}
@@ -126,7 +126,7 @@ const Skills = () => {
               transition={{
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 5,
+                duration: 1,
                 ease: "easeInOut",
               }}
               className="text-white text-4xl"

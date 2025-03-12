@@ -58,7 +58,7 @@ function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="mailto:gargvranda963@gmail.com"
+              href="mailto:vrandacodz@gmail.com"
               target="_blank"
               rel="noreferrer"
               className="text-[#FFF2F2]"

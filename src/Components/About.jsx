@@ -49,7 +49,7 @@ function About() {
         }}
         className="absolute flex justify-center items-center w-24 h-24  rounded-full mx-auto z-10"
       >
-        <FaReact className="text-white/5 text-5xl" />
+        <FaReact className="text-[#FAF7E7]/10 text-5xl" />
       </motion.div>
 
       <motion.div
@@ -63,26 +63,27 @@ function About() {
         }}
         className="absolute top-44 left-1/3 flex justify-center items-center w-24 h-24  rounded-full mx-auto z-10"
       >
-        <FaNodeJs className="text-white/5 text-5xl" />
+        <FaNodeJs className="text-[#FAF7E7]/10 text-5xl" />
       </motion.div>
 
       {/* about starts */}
       <div className="md:flex-1 p-12 my-auto">
-        <h2 className="text-3xl text-[#A9B5DF] font-semibold">Hello!!</h2>
-        <h1 className="text-4xl md:text-5xl text-[#FFF2F2] font-bold my-1">
-          My name is <span className="text-5xl md:text-6xl">Vranda Garg</span>{" "}
+        <h2 className="text-3xl text-[#FAFAF9] font-semibold">Hello!!</h2>
+        <h1 className="text-4xl md:text-5xl text-[#FAFAF9] font-bold my-1">
+          My name is{" "}
+          <span className="text-6xl font-bold md:text-6xl">Vranda Garg</span>
           ..
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-[#A9B5DF] mt-4 text-xl font-mono"
+          className="text-[#FFC20D] font-semibold mt-4 text-xl font-mono"
         >
           {displayText}
           <span className="animate-blink">|</span> {/* Blinking Cursor */}
         </motion.p>
-        <p className="text-[#A9B5DF] text-xl">
+        <p className="text-[#FFC20D] font-bold text-xl">
           I'm a passionate developer and creative artist with expertise in
           animation and video editing.
         </p>
@@ -91,7 +92,7 @@ function About() {
         {/* Background Layers */}
         <div className="absolute inset-0 mx-10 flex flex-col">
           <div className="bg-transparent w-full h-[20%]"></div>
-          <div className="bg-[#7886C7] w-full h-[80%]"></div>
+          <div className="bg-radial from-[#FFD557] from-40% to-[#FFC20D] w-full h-[80%]"></div>
         </div>
 
         {/* Motion Div (Animated Border Behind Image) */}
@@ -109,7 +110,7 @@ function About() {
             times: [0, 0.25, 0.5, 0.75, 1],
             repeat: Infinity,
           }}
-          className="bg-transparent absolute inset-0 border-2 border-white z-0 mx-9"
+          className="bg-transparent absolute inset-0 border-4 border-[#FAFAF9] z-0 mx-9"
         ></motion.div>
 
         {/* Image Wrapper */}

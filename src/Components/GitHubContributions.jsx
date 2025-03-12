@@ -55,7 +55,7 @@ const GitHubHeatmap = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl p-2 md:p-9 mx-1 md:mx-auto bg-[#252c47]/70 border-[#A9B5DF] border-1 mt-6 text-white rounded-xl md:rounded-3xl">
+    <div className="max-w-5xl p-2 md:p-9 mx-1 md:mx-auto border-[#FAF7E7] border-[1px] mt-6 text-[#FFC20D] rounded-xl md:rounded-sm bg-[#0f0e0e]/30">
       <h2 className="text-center text-lg md:text-2xl font-semibold mb-4">
         GitHub Contributions
       </h2>

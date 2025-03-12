@@ -6,19 +6,18 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
-import Achievement from "./Components/Achievement";
 import CodingStats from "./Components/CodingStats";
 
 function App() {
   return (
-    <div className="bg-[#2D336B]">
+    <div className="bg-[#242424]">
       <Headers />
       <About />
       <Skills />
       <CodingStats />
       <Projects />
       <Experience />
-      <Achievement />
+
       <Contact />
       <Footer />
     </div>

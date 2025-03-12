@@ -15,41 +15,34 @@ function CodingStats() {
       .catch((error) => console.error("Error fetching GitHub data:", error));
   }, []);
   return (
-    <div className="text-[#FFF2F2] mx-8">
-      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFF2F2]">
+    <div className=" mx-8">
+      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
         Coding Stats
       </h1>
       <div className="max-w-5xl mx-auto  rounded-lg">
         {githubData ? (
           <div className="">
             <div className="flex flex-col-2 items-center gap-3 md:gap-8 mx-auto ">
-              <div className="flex-1 bg-[#7886C7]/20 border-[#A9B5DF] border-1 py-3 rounded-xl md:rounded-3xl flex flex-col justify-center items-center gap-4">
+              <div className="flex-1  border-[#FAF7E7] border-[1px] py-3 rounded-xl md:rounded-sm flex flex-col justify-center items-center gap-4">
                 <img
                   src={githubData.avatar_url}
                   alt="GitHub Avatar"
-                  className="h-28 w-28 md:w-44 md:h-44 rounded-full mx-auto"
+                  className="h-28 w-28 md:w-32 md:h-32 rounded-full mx-auto "
                 />
 
-                <p>@VrandaaGarg</p>
+                <p className="text-[#FFD557] font-semibold">@VrandaaGarg</p>
               </div>
-              <div className="flex-1 bg-[#7886C7]/20 border-[#A9B5DF] border-1 min-h-44 md:min-h-60 rounded-xl md:rounded-3xl flex flex-col justify-center items-center gap-4">
-                <h2 className="text-lg md:text-2xl font-bold text-left">
-                  {githubData.name}
-                </h2>
-                <p className="text-left text-base md:text-2xl px-1">
-                  Public Repositories: {githubData.public_repos}
-                </p>
-                <div className="flex gap-3.5 text-lg md:text-2xl">
-                  <FaGithub size={30} />
-                  <a
-                    href={githubData.html_url}
-                    target="_blank"
-                    className="text-blue-400 underline"
-                  >
-                    View profile
-                  </a>
-                </div>
-              </div>
+              <picture>
+                <source
+                  srcset="https://github-readme-stats.vercel.app/api?username=Vrandaagarg&show_icons=true&theme=gruvbox"
+                  media="(prefers-color-scheme: dark)"
+                />
+
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=Vrandaagarg&show_icons=true"
+                  className=""
+                />
+              </picture>
             </div>
             <GitHubContributions />
           </div>

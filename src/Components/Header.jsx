@@ -19,13 +19,13 @@ const Header = () => {
         className="h-1 absolute  top-0 left-0 origin-left w-full bg-[#7886C7]"
       ></motion.div>
 
-      <header className="bg-[#2D336B] text-white border-b-[0.2px] border-b-[#96a9ed]/60 shadow-md shadow-amber-50/10">
+      <header className="bg-[#242424] text-white border-b-[0.2px] border-b-[#171717]/60 shadow-md shadow-[#171717]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <Link to="home" smooth={true} duration={500} className="r">
               <div className="flex-shrink-0">
-                <p className="bg-gradient-to-r to-[#FFF2F2] from-[#A9B5DF] bg-clip-text text-transparent text-2xl font-bold cursor-pointer">
+                <p className="bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent text-2xl font-bold cursor-pointer">
                   VrandaaGarg
                 </p>
               </div>
@@ -39,18 +39,18 @@ const Header = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="transition-all cursor-pointer"
+                  className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
                   style={{ transition: "text-shadow 0.3s ease-in-out" }}
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
-                      "2px 2px 5px rgba(255, 223, 107, 0.4)")
+                      "2px 2px 5px rgba(44, 44, 44, 0.1)")
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
                   About
                 </Link>
 
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A9B5DF] to-[#FFF2F2] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
               </div>
 
               <div className="relative group flex flex-col ">
@@ -58,18 +58,18 @@ const Header = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="transition-all cursor-pointer"
+                  className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
                   style={{ transition: "text-shadow 0.3s ease-in-out" }}
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
-                      "2px 2px 5px rgba(255, 223, 107, 0.4)")
+                      "2px 2px 5px rgba(44, 44, 44, 0.1)")
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
                   Skills
                 </Link>
 
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A9B5DF] to-[#FFF2F2] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
               </div>
 
               <div className="relative group flex flex-col ">
@@ -77,18 +77,18 @@ const Header = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="transition-all cursor-pointer"
+                  className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
                   style={{ transition: "text-shadow 0.3s ease-in-out" }}
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
-                      "2px 2px 5px rgba(255, 223, 107, 0.4)")
+                      "2px 2px 5px rgba(44, 44, 44, 0.1)")
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
                   Projects
                 </Link>
 
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A9B5DF] to-[#FFF2F2] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
               </div>
 
               <div className="relative group flex flex-col ">
@@ -96,18 +96,18 @@ const Header = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="transition-all cursor-pointer"
+                  className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
                   style={{ transition: "text-shadow 0.3s ease-in-out" }}
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
-                      "2px 2px 5px rgba(255, 223, 107, 0.4)")
+                      "2px 2px 5px rgba(44, 44, 44, 0.1)")
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
                   Experience
                 </Link>
 
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A9B5DF] to-[#FFF2F2] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
               </div>
 
               <div className="relative group flex flex-col ">
@@ -115,23 +115,23 @@ const Header = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="transition-all cursor-pointer"
+                  className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
                   style={{ transition: "text-shadow 0.3s ease-in-out" }}
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
-                      "2px 2px 5px rgba(255, 223, 107, 0.4)")
+                      "2px 2px 5px rgba(44, 44, 44, 0.1)")
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
                   Achievements
                 </Link>
 
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A9B5DF] to-[#FFF2F2] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
               </div>
             </nav>
 
             {/* Call-to-Action Button */}
-            <Link to="contact" smooth={true} duration={500} className="">
+            {/* <Link to="contact" smooth={true} duration={500} className="">
               <motion.div
                 initial={{
                   backgroundColor: "rgba(169, 181, 223, 0.5)", // 50% opacity
@@ -148,7 +148,7 @@ const Header = () => {
               >
                 Contact Me
               </motion.div>
-            </Link>
+            </Link> */}
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
