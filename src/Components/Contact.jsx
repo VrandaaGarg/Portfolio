@@ -30,10 +30,33 @@ const FormTextarea = ({ placeholder, name }) => (
 function Contact() {
   return (
     <div id="Contact" className="mb-24">
+      <motion.div
+        initial={{
+          x: [300, 0, 300, 100, 300, 0, 300],
+          y: [0, 300, 0, 100, 0, 400, 0],
+          scale: [1, 0.5, 1, 0.5, 1, 0.5],
+          rotate: [0, 90, 180, 270, 360],
+        }}
+        animate={{
+          x: [300, 0, 300, 100, 300, 0, 300],
+          y: [0, 300, 0, 100, 0, 400, 0],
+          scale: [1, 0.5, 1, 0.5, 1, 0.5],
+          rotate: [0, 90, 180, 270, 360],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+
+          ease: "linear",
+          repeatType: "loop",
+        }}
+        className="hidden md:flex md:absolute z-0 h-72 w-72 bg-amber-300/10 rounded-full shadow-2xl shadow-amber-300/10 blur-2xl opacity-80"
+      ></motion.div>
+
       <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
-        Lets's Contact
+        Let's Contact
       </h1>
-      <div className=" md:flex justify-center items-center gap-4 mt-4 px-16">
+      <div className=" md:flex justify-center items-center gap-4 mt-4 px-6 md:px-16">
         <div className="hidden md:flex-1 md:flex justify-center items-center">
           <motion.img
             initial={{ opacity: 0 }}

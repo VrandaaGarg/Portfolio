@@ -56,7 +56,20 @@ export default function Experince() {
               className="flex flex-col items-center justify-center mx-5"
             >
               <div className="h-8 w-8 rounded-full bg-gradient-to-r from-[#ffe493] to-[#FFC20D]"></div>
-              <div className="h-full w-1 bg-white/80"></div>
+              <motion.div
+                initial={{
+                  height: 0,
+                }}
+                whileInView={{
+                  height: "100%",
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.08,
+                  ease: "linear",
+                }}
+                className="h-full w-1 origin-top bg-white/80"
+              ></motion.div>
             </motion.div>
             <div className="mb-8 mt-3">
               <motion.div

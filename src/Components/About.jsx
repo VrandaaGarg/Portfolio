@@ -40,6 +40,20 @@ function About() {
       id="Home"
       className="md:flex md:flex-col-2 md:px-24 h-fit mb-9 w-full pt-16 md:pt-36 pb-24"
     >
+      <motion.div
+        initial={{
+          rotate: 0,
+        }}
+        animate={{
+          rotate: [0, 120, 240, 360], // Smooth rotation
+        }}
+        transition={{
+          duration: 10, // Adjust speed
+          repeat: Infinity, // Infinite rotation
+          ease: "linear", // Ensures constant smooth speed
+        }}
+        className="absolute right-41 top-114 w-[30px] h-[30px] bg-[#FAF7E7]/10 clip-custom"
+      ></motion.div>
       {/* fa-icons in bg */}
       <motion.div
         animate={{
@@ -72,7 +86,7 @@ function About() {
       {/* about starts */}
       <div className="md:flex-1 p-12 my-auto">
         <h2 className="text-3xl text-[#FAFAF9] font-semibold">Hello!!</h2>
-        <h1 className="text-4xl md:text-5xl text-[#FAFAF9] font-bold my-1">
+        <h1 className="text-4xl md:text-5xl text-[#FAFAF9] font-bold my-3.5">
           My name is{" "}
           <span className="text-6xl font-bold md:text-6xl">Vranda Garg</span>
           ..
@@ -81,12 +95,12 @@ function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-[#FFC20D] font-semibold mt-4 text-xl font-mono"
+          className="text-[#FFD557] font-semibold my-4 text-xl font-mono"
         >
           {displayText}
           <span className="animate-blink">|</span> {/* Blinking Cursor */}
         </motion.p>
-        <p className="text-[#FFC20D] font-bold text-xl">
+        <p className="text-[#FFC20D] font-bold text-2xl">
           I'm a passionate developer and creative artist with expertise in
           animation and video editing.
         </p>
