@@ -36,7 +36,10 @@ function About() {
   }, [index, isDeleting]);
 
   return (
-    <div className="md:flex md:flex-col-2 md:px-24 h-fit mb-9 w-full pt-16 md:pt-36 pb-24">
+    <div
+      id="Home"
+      className="md:flex md:flex-col-2 md:px-24 h-fit mb-9 w-full pt-16 md:pt-36 pb-24"
+    >
       {/* fa-icons in bg */}
       <motion.div
         animate={{

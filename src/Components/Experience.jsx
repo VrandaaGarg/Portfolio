@@ -41,10 +41,10 @@ const experience = [
 
 export default function Experince() {
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <h2 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
+    <div id="Experience" className="max-w-6xl mx-auto ">
+      <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Experience/ Achievement
-      </h2>
+      </h1>
       <div className="">
         {experience.map((exp, index) => (
           <div className="flex">
@@ -66,14 +66,14 @@ export default function Experince() {
                 whileHover={{ scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#141414]/40 border-[#FFF2F2]/50 py-9"
+                className="md:flex mr-4  items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#141414]/40 border-[#FFF2F2]/50 py-9"
               >
                 {/* Logo */}
-                <div className="w-36 h-36 flex-shrink-0">
+                <div className="w-36 h-36 flex justify-center items-center md:flex-shrink-0">
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-full h-full object-contain"
+                    className="w-full  h-full object-contain"
                   />
                 </div>
 

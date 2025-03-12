@@ -16,21 +16,23 @@ function CodingStats() {
   }, []);
   return (
     <div className=" mx-8">
-      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
+      <h1 className="text-3xl md:text-5xl text-center mb-3 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Coding Stats
       </h1>
       <div className="max-w-5xl mx-auto  rounded-lg">
         {githubData ? (
           <div className="">
             <div className="flex flex-col-2 items-center gap-3 md:gap-8 mx-auto ">
-              <div className="flex-1  border-[#FAF7E7] border-[1px] py-3 rounded-xl md:rounded-sm flex flex-col justify-center items-center gap-4">
+              <div className="flex-1 px-1 border-[#FAF7E7] border-[1px] py-3  rounded-sm flex flex-col justify-center items-center gap-1 md:gap-4">
                 <img
                   src={githubData.avatar_url}
                   alt="GitHub Avatar"
-                  className="h-28 w-28 md:w-32 md:h-32 rounded-full mx-auto "
+                  className="h-16 w-16 md:w-32 md:h-32 rounded-full mx-auto "
                 />
 
-                <p className="text-[#FFD557] font-semibold">@VrandaaGarg</p>
+                <p className="text-xs text-[#FFD557] font-semibold">
+                  @VrandaaGarg
+                </p>
               </div>
               <picture>
                 <source

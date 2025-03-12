@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <div className="fixed w-full z-50">
@@ -16,14 +15,20 @@ const Header = () => {
           scaleX: scrollYProgress,
           transition: "transform 0.2s ease-linear",
         }}
-        className="h-1 absolute  top-0 left-0 origin-left w-full bg-[#7886C7]"
+        className="h-1 absolute  top-0 left-0 origin-left w-full bg-[#FFC20D]"
       ></motion.div>
 
-      <header className="bg-[#242424] text-white border-b-[0.2px] border-b-[#171717]/60 shadow-md shadow-[#171717]/40">
+      <header className="bg-[#242424] border-b-[0.2px] border-b-[#171717]/60 shadow-md shadow-[#171717]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
-            <Link to="home" smooth={true} duration={500} className="r">
+            <Link
+              to="Home"
+              offset={-80}
+              smooth={true}
+              duration={500}
+              className="r"
+            >
               <div className="flex-shrink-0">
                 <p className="bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent text-2xl font-bold cursor-pointer">
                   VrandaaGarg
@@ -36,7 +41,8 @@ const Header = () => {
               {/* About Link with Animated Underline */}
               <div className="relative group flex flex-col ">
                 <Link
-                  to="home"
+                  to="Home"
+                  offset={-80}
                   smooth={true}
                   duration={500}
                   className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
@@ -55,7 +61,8 @@ const Header = () => {
 
               <div className="relative group flex flex-col ">
                 <Link
-                  to="home"
+                  to="Skills"
+                  offset={-80}
                   smooth={true}
                   duration={500}
                   className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
@@ -74,7 +81,8 @@ const Header = () => {
 
               <div className="relative group flex flex-col ">
                 <Link
-                  to="home"
+                  to="Projects"
+                  offset={-80}
                   smooth={true}
                   duration={500}
                   className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
@@ -93,7 +101,8 @@ const Header = () => {
 
               <div className="relative group flex flex-col ">
                 <Link
-                  to="home"
+                  to="Experience"
+                  offset={-80}
                   smooth={true}
                   duration={500}
                   className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
@@ -112,7 +121,8 @@ const Header = () => {
 
               <div className="relative group flex flex-col ">
                 <Link
-                  to="home"
+                  to="Contact"
+                  offset={-80}
                   smooth={true}
                   duration={500}
                   className="transition-all cursor-pointer text-[#FAFAF9] font-semibold"
@@ -123,7 +133,7 @@ const Header = () => {
                   }
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                 >
-                  Achievements
+                  Contact me
                 </Link>
 
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] transition-all duration-300 group-hover:w-full" />
@@ -173,18 +183,20 @@ const Header = () => {
 
           {/* Mobile Navigation Menu */}
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-5 space-y-4">
-              {["home", "services", "about", "contact"].map((section) => (
-                <Link
-                  key={section}
-                  to={section}
-                  smooth={true}
-                  duration={500}
-                  className="block text-lg hover:text-gray-300 transition-all cursor-pointer text-center"
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </Link>
-              ))}
+            <div className="md:hidden mt-5 space-y-4 ">
+              {["Home", "Skills", "Projects", "Experience", "Contact"].map(
+                (section) => (
+                  <Link
+                    key={section}
+                    to={section}
+                    smooth={true}
+                    duration={500}
+                    className="block text-[#FAFAF9] font-semibold  text-lg hover:text-gray-300 transition-all cursor-pointer text-center"
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                )
+              )}
             </div>
           )}
         </div>

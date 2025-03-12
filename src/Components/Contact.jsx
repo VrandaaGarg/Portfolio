@@ -7,10 +7,10 @@ const FormInput = ({ type, placeholder, name }) => (
     type={type}
     placeholder={placeholder}
     name={name}
-    className="w-full rounded-xl border border-purple-500/50 bg-purple-900/20
-             py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-purple-400 focus:outline-none focus:ring-2 
-             focus:ring-purple-500/20 transition-all duration-300"
+    className="w-full rounded-xl border border-[#242424]/50 bg-[#d9aa1f]/50
+             py-3 px-4 text-[#242424] placeholder:text-amber-200
+             focus:border-[#242424]/90 focus:outline-none focus:ring-2 
+             focus:ring-[#FFC20D]/20 transition-all duration-300"
   />
 );
 
@@ -20,35 +20,46 @@ const FormTextarea = ({ placeholder, name }) => (
     placeholder={placeholder}
     name={name}
     rows="4"
-    className="w-full rounded-xl border border-purple-500/50 bg-purple-900/20
-             py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-purple-400 focus:outline-none focus:ring-2 
-             focus:ring-purple-500/20 transition-all duration-300
-             resize-none"
+    className="w-full rounded-xl border border-[#242424]/50 bg-[#d9aa1f]/50
+             py-3 px-4 text-[#242424] placeholder:text-amber-200
+             focus:border-[#242424]/90 focus:outline-none focus:ring-2 
+             focus:ring-[#FFC20D]/20 transition-all duration-300"
   />
 );
 
 function Contact() {
   return (
-    <div className="mb-24">
-      <h1 className="text-5xl text-center mb-9 mt-36 font-semibold text-[#FFC20D]">
+    <div id="Contact" className="mb-24">
+      <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Lets's Contact
       </h1>
-      <div className="flex justify-center items-center gap-4 mt-4 px-16">
-        <div className="flex-1 flex justify-center items-center">
-          <img src="/contact.webp" alt="image" className="h-80 w-fit" />
+      <div className=" md:flex justify-center items-center gap-4 mt-4 px-16">
+        <div className="hidden md:flex-1 md:flex justify-center items-center">
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 2,
+              delay: 0.2,
+            }}
+            src="/contact.webp"
+            alt="image"
+            className="h-96 w-fit"
+          />
         </div>
-        <div className="flex-1 bg-gradient-to-r from-[#FFD557] to-[#FFC20D] border-t-[#7886C7] rounded-lg mr-16 max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+          }}
+          className="md:flex-1 bg-radial  from-[rgb(255,221,128)] to-[#FFC20D] rounded-lg md:mr-16 max-w-3xl"
+        >
           <motion.form
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
             action="https://formspree.io/f/mvgkovyl"
             method="POST"
-            className="bg-gradient-to-br from-purple-900/40 to-purple-800/30 backdrop-blur-md
-                     border border-purple-500/30 p-8 rounded-2xl
-                     hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]
-                     transition-all duration-300"
+            className=" p-8 rounded-2xl transition-all duration-300"
           >
             <div className="space-y-6">
               <FormInput type="text" placeholder="Your Name" name="name" />
@@ -57,18 +68,15 @@ function Contact() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.2 }}
                 type="submit"
-                className="w-full py-4 rounded-xl text-white font-semibold
-                         bg-gradient-to-r from-purple-600 to-pink-600
-                         hover:from-purple-700 hover:to-pink-700
-                         transform transition-all duration-300
-                         shadow-lg hover:shadow-purple-500/50"
+                className="w-full bg-[#242424]/80 border-1 border-[#242424] hover:bg-[#242424]/90 ease-in-out transition-all duration-150 py-4 rounded-xl text-white font-semibold"
               >
                 Send Message
               </motion.button>
             </div>
           </motion.form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

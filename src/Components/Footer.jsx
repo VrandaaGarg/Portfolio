@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <div className="w-full bg-gradient-to-r from-[#313871] to-[#272d59] border-t-[#7886C7] border-t-1 py-4">
-      <footer className="text-center text-white text-sm p-1 md:p-3 flex justify-between px-4 md:px-11 items-center">
+    <div className="w-full bg-[#242424]  border-t-[#0f0f0f] border-t-1 shadow-[#0f0f0f]/40 shadow-md ">
+      <footer className="text-center text-[#FAFAF9] text-sm p-1 md:p-3 flex justify-between px-4 md:px-11 items-center">
         <div className="text-lg md:text-2xl">
-          <h1 className="">
+          <h1 className=" text-[#FAFAF9]/90">
             Vranda Garg
             <motion.span
               initial={{
@@ -32,7 +32,7 @@ function Footer() {
           </h1>
         </div>
         <div className="">
-          <div className="text-lg md:text-4xl flex justify-center gap-2 md:gap-4 my-2 md:my-4">
+          <div className="text-lg md:text-2xl flex justify-center gap-2 md:gap-4 my-2 md:my-4">
             <a
               href="https://github.com/VrandaaGarg"
               target="_blank"

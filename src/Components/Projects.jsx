@@ -1,7 +1,7 @@
 import React from "react";
 
 function Projects() {
-  return <div className=""></div>;
+  return <div id="Projects" className=""></div>;
 }
 
 export default Projects;

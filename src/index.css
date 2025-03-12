@@ -1,4 +1,8 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
 .color-empty {
   fill: #161b22;
 }
