@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaCode } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { motion, useScroll } from "framer-motion";
 
@@ -21,18 +21,40 @@ const Header = () => {
       <header className="bg-[#121212] border-b-[0.2px] border-b-[#1c1c1c] shadow-md shadow-[#1c1c1c]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
-            {/* Logo Section */}
+            {/* Logo Section with animated icon */}
             <Link
               to="Home"
               offset={-80}
               smooth={true}
               duration={500}
-              className="r"
+              className="flex items-center gap-2 group"
             >
+              <motion.div
+                initial={{ rotate: -180, scale: 0 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                  delay: 0.2
+                }}
+                whileHover={{ 
+                  rotate: 360,
+                  transition: { duration: 0.8, ease: "easeInOut" }
+                }}
+                className="flex-shrink-0"
+              >
+                <FaCode className="text-[#FFC20D] text-2xl" />
+              </motion.div>
               <div className="flex-shrink-0">
-                <p className="bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent text-2xl font-bold cursor-pointer">
-                  VrandaaGarg
-                </p>
+                <motion.p
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent text-2xl font-bold cursor-pointer"
+                >
+                  Vranda Garg
+                </motion.p>
               </div>
             </Link>
 
