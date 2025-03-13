@@ -7,7 +7,6 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import CodingStats from "./Components/CodingStats";
-import AnimatedScroll from "./ProjectAnimation/AarcadiaScroll";
 
 function App() {
   return (
