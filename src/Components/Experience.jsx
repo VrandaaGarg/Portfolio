@@ -79,7 +79,7 @@ export default function Experince() {
                 whileHover={{ scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="md:flex mr-4  items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#141414]/40 border-[#FFF2F2]/50 py-9"
+                className="md:flex mr-4  items-center gap-6 p-6 border rounded-lg shadow-lg bg-[#141414]/40 border-[#FFF2F2]/50 py-3 md:py-9"
               >
                 {/* Logo */}
                 <div className="w-36 h-36 flex justify-center items-center md:flex-shrink-0">
