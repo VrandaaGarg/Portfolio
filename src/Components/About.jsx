@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { FaHandPeace } from "react-icons/fa6";
 
 const text = "I am a Full Stack Developer.";
 
@@ -85,7 +86,16 @@ function About() {
 
       {/* about starts */}
       <div className="md:flex-1 p-12 my-auto">
-        <h2 className="text-3xl text-[#FAFAF9] font-semibold">Hello!!</h2>
+        <h2 className="text-3xl text-[#FAFAF9] font-semibold">
+          Hello!!{" "}
+          <motion.span
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="inline-block ml-2"
+          >
+            <FaHandPeace className="text-[#ffd966]" />
+          </motion.span>
+        </h2>
         <h1 className="text-4xl md:text-5xl text-[#FAFAF9] font-bold my-3.5">
           My name is{" "}
           <span className="text-6xl font-bold md:text-6xl">Vranda Garg</span>

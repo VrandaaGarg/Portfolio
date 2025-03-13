@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaAward } from "react-icons/fa6";
 
 const experience = [
   {
@@ -44,6 +45,13 @@ export default function Experince() {
     <div id="Experience" className="max-w-6xl mx-auto ">
       <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Experience/ Achievement
+        <motion.span
+          animate={{ rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="inline-block ml-2"
+        >
+          <FaAward className=" text-[#FFC20D]" />
+        </motion.span>
       </h1>
       <div className="">
         {experience.map((exp, index) => (

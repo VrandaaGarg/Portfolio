@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import GitHubContributions from "./GitHubContributions";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaCode } from "react-icons/fa";
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
@@ -19,6 +20,13 @@ function CodingStats() {
     <div className=" mx-8">
       <h1 className="text-3xl md:text-5xl text-center mb-3 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Coding Stats
+        <motion.span
+          animate={{ rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="inline-block ml-2"
+        >
+          <FaCode className="inline-block text-4xl md:text-5xl text-[#FFC20D]" />
+        </motion.span>
       </h1>
       <div className="max-w-5xl mx-auto  rounded-lg">
         {githubData ? (

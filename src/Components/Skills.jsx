@@ -21,6 +21,7 @@ import {
   SiC,
   SiGithub,
 } from "react-icons/si";
+import { AiOutlineCode } from "react-icons/ai";
 
 const skills = [
   {
@@ -110,6 +111,13 @@ const Skills = () => {
     <div id="Skills" className="">
       <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Skills
+        <motion.span
+          animate={{ rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="inline-block ml-2"
+        >
+          <AiOutlineCode className=" text-[#FFC20D]" />
+        </motion.span>
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 p-6 md:px-24 justify-center items-center">
         {skills.map((skill, index) => (

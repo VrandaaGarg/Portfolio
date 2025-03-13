@@ -66,7 +66,7 @@ function Contact() {
         />
       ))}
 
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -75,12 +75,12 @@ function Contact() {
                   bg-clip-text text-transparent tracking-tight"
       >
         Let's Connect
-        <motion.span 
+        <motion.span
           animate={{ rotate: [0, 10, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="inline-block ml-2"
         >
-          <BsEnvelopePaper className="inline-block text-4xl md:text-5xl text-[#FFC20D]" />
+          <BsEnvelopePaper className="inline-block  text-[#FFC20D]" />
         </motion.span>
       </motion.h1>
 
@@ -125,10 +125,10 @@ function Contact() {
             <FormInput type="email" placeholder="Your Email" name="email" />
             <FormTextarea placeholder="Your Message" name="message" />
             <motion.button
-              whileHover={{ 
-                scale: 1.02, 
+              whileHover={{
+                scale: 1.02,
                 backgroundColor: "#FFC20D",
-                boxShadow: "0 0 20px rgba(255, 194, 13, 0.3)"
+                boxShadow: "0 0 20px rgba(255, 194, 13, 0.3)",
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const projects = [
   {
@@ -58,6 +59,13 @@ function Projects() {
     <div id="Projects" className="px-6 md:px-12 mt-28 bg-[#121212] text-white">
       <h1 className="text-4xl md:text-5xl text-center font-semibold text-[#FFC20D] mb-12">
         Projects
+        <motion.span
+          animate={{ rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="inline-block ml-2"
+        >
+          <FaProjectDiagram className="inline-block text-4xl md:text-5xl text-[#FFC20D]" />
+        </motion.span>
       </h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
