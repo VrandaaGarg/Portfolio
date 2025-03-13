@@ -42,7 +42,7 @@ const experience = [
 
 export default function Experince() {
   return (
-    <div id="Experience" className="max-w-6xl mx-auto ">
+    <div id="Experience" className="max-w-6xl mx-auto px-2">
       <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
         Experience/ Achievement
         <motion.span

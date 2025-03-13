@@ -96,9 +96,11 @@ function About() {
             <FaHandPeace className="text-[#ffd966]" />
           </motion.span>
         </h2>
-        <h1 className="text-4xl md:text-5xl text-[#FAFAF9] font-bold my-3.5">
-          My name is{" "}
-          <span className="text-6xl font-bold md:text-6xl">Vranda Garg</span>
+        <h1 className="text-3xl md:text-5xl text-[#FAFAF9] font-bold my-3.5">
+          My name is
+          <span className="text-4xl my-3 font-bold md:text-6xl">
+            Vranda Garg
+          </span>
           ..
         </h1>
         <motion.p

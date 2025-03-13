@@ -41,7 +41,10 @@ function Contact() {
   const floatingStars = Array(3).fill(null);
 
   return (
-    <div id="Contact" className="relative min-h-screen py-20 overflow-hidden">
+    <div
+      id="Contact"
+      className="relative md:min-h-screen py-20 overflow-hidden"
+    >
       {/* Animated background elements */}
       {floatingStars.map((_, index) => (
         <motion.div
