@@ -7,7 +7,7 @@ const projects = [
   {
     name: "Aarcadia",
     image: "/aarcadia.png",
-    liveDemo: "https://vrandaagarg.vercel.app",
+    liveDemo: "https://aarcadia.vercel.app/",
     codeUrl: "https://github.com/VrandaaGarg/Arcadia",
     description:
       "A Gaming hub where users can create a profile and enjoy both single-player and two-player games. Compete with others, track your progress, and climb the leaderboard to see your ranking! 🚀🎮",
@@ -28,14 +28,7 @@ const projects = [
     description:
       "Explore my portfolio showcasing my dynamic web projects,achievements and Coding stats",
   },
-  {
-    name: "Terra",
-    image: "/Terra.png",
-    liveDemo: "https://terra-devfolio.vercel.app/",
-    codeUrl: "https://github.com/lalit-rao/Terra-Project",
-    description:
-      "Terra is your one-stop shop for everything sustainability, from measuring your environmental impact to finding eco-friendly products and travel options.",
-  },
+
   {
     name: "EcoVatika",
     image: "/Ecovatika.png",
