@@ -87,7 +87,7 @@ const skills = [
   {
     name: "Express",
     icon: <SiExpress />,
-    bgColor: "#030303",
+    bgColor: "black",
   },
   {
     name: "MongoDB",
@@ -102,7 +102,7 @@ const skills = [
   {
     name: "GitHub",
     icon: <SiGithub />,
-    bgColor: "#181717",
+    bgColor: "black",
   },
 ];
 const Skills = () => {
@@ -117,7 +117,7 @@ const Skills = () => {
             key={index}
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
-            className="flex flex-col items-center bg-[#FFC20D]/5 hover:shadow-amber-100/5 hover:bg-[#FFD557]/10 border-[#FAF7E7] border-1 justify-center p-4 rounded-xl shadow-lg cursor-pointer"
+            className="flex flex-col items-center bg-[#1c1c1c]/70 hover:shadow-amber-100/5 hover:bg-[#FFD557]/10 border-[#FAF7E7] border-1 justify-center p-4 rounded-xl shadow-lg cursor-pointer"
           >
             <motion.div
               key={index}

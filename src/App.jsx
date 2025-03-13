@@ -10,7 +10,7 @@ import CodingStats from "./Components/CodingStats";
 
 function App() {
   return (
-    <div className="bg-[#242424] ">
+    <div className="bg-[#121212] ">
       <Headers />
       <About />
       <Skills />

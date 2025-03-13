@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <div className="w-full bg-[#242424]  border-t-[#0f0f0f] border-t-1 shadow-[#0f0f0f]/40 shadow-md ">
+    <div className="w-full bg-[#0f0f0f]  border-t-[#252525] border-t-1 shadow-[#0f0f0f]/40 shadow-md ">
       <footer className="text-center text-[#FAFAF9] text-sm p-1 md:p-3 flex justify-between px-4 md:px-11 items-center">
         <div className="text-lg md:text-2xl">
           <h1 className=" text-[#FAFAF9]/90">

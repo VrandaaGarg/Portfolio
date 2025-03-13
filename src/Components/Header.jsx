@@ -18,7 +18,7 @@ const Header = () => {
         className="h-1 absolute  top-0 left-0 origin-left w-full bg-[#FFC20D]"
       ></motion.div>
 
-      <header className="bg-[#242424] border-b-[0.2px] border-b-[#171717]/60 shadow-md shadow-[#171717]/40">
+      <header className="bg-[#121212] border-b-[0.2px] border-b-[#1c1c1c] shadow-md shadow-[#1c1c1c]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
             {/* Logo Section */}

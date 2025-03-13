@@ -8,7 +8,7 @@ const FormInput = ({ type, placeholder, name }) => (
     placeholder={placeholder}
     name={name}
     className="w-full rounded-xl border border-[#242424]/50 bg-[#d9aa1f]/50
-             py-3 px-4 text-[#242424] placeholder:text-amber-200
+             py-3 px-4 text-[#242424] placeholder:text-amber-900/50
              focus:border-[#242424]/90 focus:outline-none focus:ring-2 
              focus:ring-[#FFC20D]/20 transition-all duration-300"
   />
@@ -21,7 +21,7 @@ const FormTextarea = ({ placeholder, name }) => (
     name={name}
     rows="4"
     className="w-full rounded-xl border border-[#242424]/50 bg-[#d9aa1f]/50
-             py-3 px-4 text-[#242424] placeholder:text-amber-200
+             py-3 px-4 text-[#242424] placeholder:text-amber-900/50
              focus:border-[#242424]/90 focus:outline-none focus:ring-2 
              focus:ring-[#FFC20D]/20 transition-all duration-300"
   />
@@ -50,7 +50,7 @@ function Contact() {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="hidden md:flex md:absolute z-0 h-72 w-72 bg-amber-300/10 rounded-full shadow-2xl shadow-amber-300/10 blur-2xl opacity-80"
+        className="hidden md:flex md:absolute z-0 h-72 w-72 bg-amber-300/5 rounded-full shadow-2xl shadow-amber-300/10 blur-2xl opacity-80"
       ></motion.div>
 
       <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">

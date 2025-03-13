@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import GitHubContributions from "./GitHubContributions";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
@@ -22,8 +23,19 @@ function CodingStats() {
       <div className="max-w-5xl mx-auto  rounded-lg">
         {githubData ? (
           <div className="">
-            <div className="flex flex-col-2 items-center gap-3 md:gap-8 mx-auto ">
-              <div className="flex-1 px-1 border-[#FAF7E7] border-[1px] py-3  rounded-sm flex flex-col justify-center items-center gap-1 md:gap-4">
+            <div className="flex  flex-col-2 items-center gap-3 md:gap-8 mx-auto ">
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  rotate: 0.1,
+                }}
+                transition={{
+                  duration: 0.5,
+                  damping: 10,
+                  stiffness: 100,
+                }}
+                className="flex-1 px-1 bg-[#242424] border-[#FAF7E7] border-[1px] py-3  rounded-sm flex flex-col justify-center items-center gap-1 md:gap-4"
+              >
                 <img
                   src={githubData.avatar_url}
                   alt="GitHub Avatar"
@@ -33,8 +45,18 @@ function CodingStats() {
                 <p className="text-xs text-[#FFD557] font-semibold">
                   @VrandaaGarg
                 </p>
-              </div>
-              <picture>
+              </motion.div>
+              <motion.picture
+                whileHover={{
+                  scale: 1.02,
+                  rotate: 0.1,
+                }}
+                transition={{
+                  duration: 0.5,
+                  damping: 10,
+                  stiffness: 100,
+                }}
+              >
                 <source
                   srcset="https://github-readme-stats.vercel.app/api?username=Vrandaagarg&show_icons=true&theme=gruvbox"
                   media="(prefers-color-scheme: dark)"
@@ -44,7 +66,7 @@ function CodingStats() {
                   src="https://github-readme-stats.vercel.app/api?username=Vrandaagarg&show_icons=true"
                   className=""
                 />
-              </picture>
+              </motion.picture>
             </div>
             <GitHubContributions />
           </div>

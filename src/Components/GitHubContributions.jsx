@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 import { subDays, format } from "date-fns";
+import { motion } from "framer-motion";
 
 // Load environment variables
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
@@ -55,7 +56,18 @@ const GitHubHeatmap = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl p-2 md:p-9 mx-1 md:mx-auto border-[#FAF7E7] border-[1px] mt-6 text-[#FFC20D] rounded-sm bg-[#0f0e0e]/30">
+    <motion.div
+      whileHover={{
+        scale: 1.02,
+        rotate: 0.1,
+      }}
+      transition={{
+        duration: 0.5,
+        damping: 10,
+        stiffness: 100,
+      }}
+      className="max-w-5xl p-2  md:p-9 mx-1 md:mx-auto border-[#FAF7E7] border-[1px] mt-6 text-[#FFC20D] rounded-sm bg-[#242424]"
+    >
       <h2 className="text-center text-lg md:text-2xl font-semibold mb-4">
         GitHub Contributions
       </h2>
@@ -75,7 +87,7 @@ const GitHubHeatmap = () => {
           "data-tip": `${value.date}: ${value.count} contributions`,
         })}
       />
-    </div>
+    </motion.div>
   );
 };
 
