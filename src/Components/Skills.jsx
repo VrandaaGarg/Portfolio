@@ -135,7 +135,7 @@ const Skills = () => {
                 repeat: Infinity,
                 repeatType: "loop",
                 duration: 1,
-                ease: "easeInOut",
+                ease: "linear",
               }}
               className="text-white text-4xl"
               style={{
