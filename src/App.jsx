@@ -9,9 +9,28 @@ import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import CodingStats from "./Components/CodingStats";
 import "@fontsource/josefin-sans"; // Default weight (400)
+import { useState, useEffect } from "react";
 
 function App() {
-  return (
+  const [loading, setLoading] = useState(true);
+  const Loader = () => {
+    return (
+      <div className="flex justify-center items-center h-screen bg-[#121212] flex-col">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-[#FFC20D]"></div>
+        <h1 className="text-[#FAFAF9] text-center font-semibold text-2xl mt-3 ">
+          Loading...
+        </h1>
+      </div>
+    );
+  };
+
+  useEffect(() => {
+    // Show the loader for 2 seconds
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+  return loading ? (
+    <Loader />
+  ) : (
     <div
       className="bg-[#121212] "
       style={{ fontFamily: "Josefin Sans, sans-serif" }}

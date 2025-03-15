@@ -4,6 +4,7 @@ import GitHubContributions from "./GitHubContributions";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
+import { PiSmileySad } from "react-icons/pi";
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
@@ -42,13 +43,22 @@ function CodingStats() {
                   damping: 10,
                   stiffness: 100,
                 }}
-                className="flex-1 px-1 bg-[#242424] border-[#FAF7E7] border-[1px] py-3  rounded-sm flex flex-col justify-center items-center gap-1 md:gap-4"
+                className="flex-1 px-1 bg-[#242424] border-[#FAF7E7] border-[1px] py-1 md:py-3  rounded-sm flex flex-col justify-center items-center gap-1 md:gap-4"
               >
-                <img
-                  src={githubData.avatar_url}
-                  alt="GitHub Avatar"
-                  className="h-16 w-16 md:w-32 md:h-32 rounded-full mx-auto "
-                />
+                {githubData && githubData.avatar_url ? (
+                  <img
+                    src={githubData.avatar_url}
+                    alt="GitHub Avatar"
+                    className=" h-10 w-10 md:w-32 md:h-32 rounded-full mx-auto"
+                  />
+                ) : (
+                  <p className="text-white text-center  flex-col animate-pulse text-[6px] md:text-xl h-10 w-10 md:w-32 md:h-32 rounded-full mx-auto flex justify-center items-center border-1 border-white">
+                    Not
+                    <br />
+                    Loaded...
+                    <PiSmileySad className="text-[#FFD557] text-base md:text-4xl" />
+                  </p>
+                )}
 
                 <p className="text-xs text-[#FFD557] font-semibold">
                   @VrandaaGarg
