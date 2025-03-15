@@ -36,11 +36,11 @@ const Header = () => {
                   type: "spring",
                   stiffness: 260,
                   damping: 20,
-                  delay: 0.2
+                  delay: 0.2,
                 }}
-                whileHover={{ 
+                whileHover={{
                   rotate: 360,
-                  transition: { duration: 0.8, ease: "easeInOut" }
+                  transition: { duration: 0.8, ease: "easeInOut" },
                 }}
                 className="flex-shrink-0"
               >
@@ -205,21 +205,27 @@ const Header = () => {
 
           {/* Mobile Navigation Menu */}
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-5 space-y-4 ">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isMobileMenuOpen ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden mt-5 space-y-4 "
+            >
               {["Home", "Skills", "Projects", "Experience", "Contact"].map(
                 (section) => (
                   <Link
                     key={section}
                     to={section}
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     smooth={true}
-                    duration={500}
+                    duration={1000}
                     className="block text-[#FAFAF9] font-semibold  text-lg hover:text-gray-300 transition-all cursor-pointer text-center"
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </Link>
                 )
               )}
-            </div>
+            </motion.div>
           )}
         </div>
       </header>
