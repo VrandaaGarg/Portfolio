@@ -50,6 +50,7 @@ const Header = () => {
                 <motion.p
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
+                  whileHover={{ scale: 1.05, duration: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent text-2xl font-bold cursor-pointer"
                 >
