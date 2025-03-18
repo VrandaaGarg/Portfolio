@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
-import LazyImage from './LazyImage';
+import LazyImage from "./LazyImage";
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
   {
     name: "SmartBite",
     image: "/SmartBite.png",
-    liveDemo: "https://twiggy.netlify.app/",
+    liveDemo: "https://smartbite.vrandagarg.me/",
     codeUrl: "https://github.com/VrandaaGarg/Twiggy",
     description:
       "A modern and efficient food ordering solution.SmartBite offers a seamless experience for both customers and restaurant owners. Streamlining operations and enhancing customer satisfaction",
@@ -24,7 +24,7 @@ const projects = [
   {
     name: "Portfolio",
     image: "/portfolio.png",
-    liveDemo: "https://vrandaagarg.vercel.app/",
+    liveDemo: "https://vrandagarg.me/",
     codeUrl: "https://github.com/VrandaaGarg/Portfolio",
     description:
       "Explore my portfolio showcasing my dynamic web projects,achievements and Coding stats",
@@ -33,7 +33,7 @@ const projects = [
   {
     name: "EcoVatika",
     image: "/Ecovatika.png",
-    liveDemo: "https://66b0092895b5971368e46b05--ecovatikaa.netlify.app/",
+    liveDemo: "https://ecovatika.vrandagarg.me/",
     codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
     description:
       "A website designed to help individuals and communities embrace a sustainable lifestyle.",
@@ -41,7 +41,7 @@ const projects = [
   {
     name: "NexRide",
     image: "/nexride.png",
-    liveDemo: "",
+    liveDemo: "https://nexride.vrandagarg.me/",
     codeUrl: "https://github.com/VrandaaGarg/NexRide",
     description:
       "NexRide revolutionizes electric 2-wheeler delivery logistics with smart model selection . Our system ensures efficiency, transparency, and a seamless user experience for both customers and sellers.",
