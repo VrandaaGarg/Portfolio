@@ -60,7 +60,7 @@ function App() {
     <Loader />
   ) : (
     <div
-      className="bg-[#121212] "
+      className="bg-[#121212] min-h-screen w-full relative overflow-x-hidden"
       style={{ fontFamily: "Josefin Sans, sans-serif" }}
     >
       <CustomCursor />

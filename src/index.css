@@ -27,6 +27,17 @@ html {
 html,
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #121212;
+  position: relative;
+  overflow: hidden;
 }
 
 .clip-custom {
