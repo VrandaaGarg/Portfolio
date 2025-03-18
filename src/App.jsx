@@ -8,6 +8,7 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import CodingStats from "./Components/CodingStats";
+import CustomCursor from "./Components/CustomCursor";
 import "@fontsource/josefin-sans"; // Default weight (400)
 import { useState, useEffect } from "react";
 
@@ -25,23 +26,50 @@ function App() {
   };
 
   useEffect(() => {
-    // Show the loader for 2 seconds
+    // Add smooth scroll class to body
+    document.body.classList.add('smooth-scroll');
+    
+    // Configure smooth scroll behavior
+    const smoothScroll = (e) => {
+      if (e.target.hash) {
+        const element = document.querySelector(e.target.hash);
+        if (element) {
+          e.preventDefault();
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }
+    };
+
+    // Add event listener for anchor clicks
+    document.addEventListener('click', smoothScroll);
+    
+    // Show the loader
     setTimeout(() => setLoading(false), 1000);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', smoothScroll);
+      document.body.classList.remove('smooth-scroll');
+    };
   }, []);
   return loading ? (
     <Loader />
   ) : (
     <div
-      className="bg-[#121212] "
+      className="bg-[#121212] min-h-screen w-full relative overflow-x-hidden"
       style={{ fontFamily: "Josefin Sans, sans-serif" }}
     >
+      <CustomCursor />
       <Headers />
       <About />
       <Skills />
       <CodingStats />
       <Projects />
       <Experience />
-
       <Contact />
       <Footer />
     </div>

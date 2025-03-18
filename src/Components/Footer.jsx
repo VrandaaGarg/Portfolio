@@ -43,19 +43,70 @@ function Footer() {
     },
   };
 
+  const floatingAnimation = {
+    initial: { y: 0 },
+    animate: {
+      y: [-5, 5, -5],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }
+    }
+  };
+
+  const glowAnimation = {
+    initial: { 
+      boxShadow: "0 0 0 rgba(255, 194, 13, 0)" 
+    },
+    animate: {
+      boxShadow: [
+        "0 0 10px rgba(255, 194, 13, 0.2)",
+        "0 0 20px rgba(255, 194, 13, 0.4)",
+        "0 0 10px rgba(255, 194, 13, 0.2)"
+      ],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const rotateAnimation = {
+    initial: { rotate: 0 },
+    animate: { rotate: 10 },
+  };
+
   const socials = [
-    { icon: FaGithub, url: "https://github.com/VrandaaGarg", color: "#f5f5f5" },
+    { 
+      icon: FaGithub, 
+      url: "https://github.com/VrandaaGarg", 
+      color: "#f5f5f5",
+      bgColor: "#333333",
+      delay: 0 
+    },
     {
       icon: FaLinkedin,
       url: "https://www.linkedin.com/in/vranda-garg-b68011293/",
-      color: "#0A66C2",
+      color: "#ffffff",
+      bgColor: "#0A66C2",
+      delay: 0.2
     },
     {
       icon: FaInstagram,
       url: "https://www.instagram.com/vranda_garg",
-      color: "#E4405F",
+      color: "#ffffff",
+      bgColor: "#E4405F",
+      delay: 0.4
     },
-    { icon: CiMail, url: "mailto:vrandacodz@gmail.com", color: "#38B2AC" },
+    { 
+      icon: CiMail, 
+      url: "mailto:vrandacodz@gmail.com", 
+      color: "#ffffff",
+      bgColor: "#FFC20D",
+      delay: 0.6 
+    },
   ];
 
   const codingIcons = [
@@ -154,25 +205,56 @@ function Footer() {
                 key={index}
                 className="relative group"
                 variants={socialItemVariants}
+                initial="initial"
+                animate="animate"
                 whileHover="hover"
+                custom={social.delay}
               >
                 <motion.a
                   href={social.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-2xl block p-2 text-[#FAFAF9]"
-                  whileHover={{
+                  className="relative text-2xl block p-3 rounded-xl"
+                  variants={floatingAnimation}
+                  initial="initial"
+                  animate="animate"
+                  style={{
+                    backgroundColor: social.bgColor,
                     color: social.color,
-                    filter: "brightness(1.2)",
-                    scale: 1.1,
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                  }}
+                  whileHover={{
+                    scale: 1.2,
+                    y: -5,
+                    boxShadow: `0 6px 20px ${social.bgColor}40`,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15
                   }}
                 >
-                  <social.icon />
+                  <motion.div
+                    animate={{ 
+                      scale: [1, 1.1],
+                      rotate: [-5, 5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <social.icon />
+                  </motion.div>
                 </motion.a>
                 <motion.span
                   initial={{ opacity: 0, y: 10 }}
                   whileHover={{ opacity: 1, y: 0 }}
-                  className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-[#FAFAF9]/70 whitespace-nowrap bg-[#1c1c1c]/90 px-2 py-1 rounded"
+                  className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 
+                           text-xs text-[#FAFAF9]/70 whitespace-nowrap 
+                           bg-[#1c1c1c]/90 px-2 py-1 rounded"
                 >
                   {social.url.includes("github")
                     ? "GitHub"
