@@ -26,8 +26,35 @@ function App() {
   };
 
   useEffect(() => {
-    // Show the loader for 2 seconds
+    // Add smooth scroll class to body
+    document.body.classList.add('smooth-scroll');
+    
+    // Configure smooth scroll behavior
+    const smoothScroll = (e) => {
+      if (e.target.hash) {
+        const element = document.querySelector(e.target.hash);
+        if (element) {
+          e.preventDefault();
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }
+    };
+
+    // Add event listener for anchor clicks
+    document.addEventListener('click', smoothScroll);
+    
+    // Show the loader
     setTimeout(() => setLoading(false), 1000);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', smoothScroll);
+      document.body.classList.remove('smooth-scroll');
+    };
   }, []);
   return loading ? (
     <Loader />
