@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { FaHandPeace } from "react-icons/fa6";
+import LazyImage from './LazyImage';
 
 const text = "I am a Full Stack Developer.";
 
@@ -144,10 +145,10 @@ function About() {
 
         {/* Image Wrapper */}
         <div className="relative  z-20 flex justify-center items-center pt-7">
-          <img
+          <LazyImage
             src="/download.png"
             alt="Vranda Garg"
-            className=" h-[270px] md:h-[450px] w-auto object-cover"
+            className="h-[270px] md:h-[450px] w-auto object-cover"
           />
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa6";
+import LazyImage from './LazyImage';
 
 const experience = [
   {
@@ -90,10 +91,10 @@ export default function Experince() {
               >
                 {/* Logo */}
                 <div className="w-36 h-36 flex justify-center items-center md:flex-shrink-0">
-                  <img
+                  <LazyImage
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-full  h-full object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 

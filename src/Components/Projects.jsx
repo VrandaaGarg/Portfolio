@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
+import LazyImage from './LazyImage';
 
 const projects = [
   {
@@ -73,10 +74,8 @@ function Projects() {
             key={index}
             className="bg-[#1c1c1c]/70 hover:bg-[#303030]/40  p-6 rounded-2xl shadow-lg transition transform hover:-translate-y-2"
           >
-            <motion.img
+            <LazyImage
               src={project.image}
-              whileHover={{ zoom: 1.2 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
               alt={project.name}
               className="w-full h-52 object-cover rounded-lg"
             />
