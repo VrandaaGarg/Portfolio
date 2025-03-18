@@ -8,6 +8,7 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import CodingStats from "./Components/CodingStats";
+import CustomCursor from "./Components/CustomCursor";
 import "@fontsource/josefin-sans"; // Default weight (400)
 import { useState, useEffect } from "react";
 
@@ -35,13 +36,13 @@ function App() {
       className="bg-[#121212] "
       style={{ fontFamily: "Josefin Sans, sans-serif" }}
     >
+      <CustomCursor />
       <Headers />
       <About />
       <Skills />
       <CodingStats />
       <Projects />
       <Experience />
-
       <Contact />
       <Footer />
     </div>

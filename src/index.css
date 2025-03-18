@@ -67,3 +67,44 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #FFC20D #121212;
 }
+
+/* Custom Cursor Styles */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(45deg, #FFD557, #FFC20D);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px rgba(255, 194, 13, 0.6));
+  backdrop-filter: blur(4px);
+}
+
+.cursor-ring {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9998;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #FFC20D;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 15px rgba(255, 194, 13, 0.3));
+  transform-origin: center center;
+}
+
+@media (hover: none) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) {
+  * {
+    cursor: none !important;
+  }
+}
