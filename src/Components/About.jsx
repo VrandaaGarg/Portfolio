@@ -146,7 +146,7 @@ function About() {
         {/* Image Wrapper */}
         <div className="relative  z-20 flex justify-center items-center pt-7">
           <LazyImage
-            src="/download.png"
+            src="/download-comp.png"
             alt="Vranda Garg"
             className="h-[270px] md:h-[450px] w-auto object-cover"
           />
