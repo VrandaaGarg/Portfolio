@@ -6,6 +6,14 @@ import LazyImage from "./LazyImage";
 
 const projects = [
   {
+    name: "Intellica",
+    image: "/Intellica.png",
+    liveDemo: "https://intellica.ayush-sharma.in/",
+    codeUrl: "https://github.com/CyberBoyAyush/intellica",
+    description:
+      "AI powered learning platform.Transform your learning with AI-powered tools that help you to understand and remember the concepts better. 🚀🧠",
+  },
+  {
     name: "Aarcadia",
     image: "/aarcadia.png",
     liveDemo: "https://aarcadia.vercel.app/",
