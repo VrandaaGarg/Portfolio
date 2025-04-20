@@ -9,7 +9,7 @@ const projects = [
     name: "SmartBite",
     image: "/smartbite.png",
     liveDemo: "https://smartbite.vrandagarg.me/",
-    codeUrl: "https://github.com/VrandaaGarg/Twiggy",
+    codeUrl: "https://github.com/VrandaaGarg/SmartBite",
     description:
       "SmartBite is a full-stack restaurant food ordering system tailored for a single restaurant owner. From browsing dishes to placing orders, from managing dishes to viewing customers, it handles it all — with an intuitive UI and a smooth, animated experience.",
   },
