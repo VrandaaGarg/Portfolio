@@ -21,7 +21,7 @@ Welcome to my personal developer portfolio website!
 [Check out the website here](https://vrandagarg.me/) <!-- Replace # with your actual deployed link -->
 
 ## 📸 Sneak Peek
-![Portfolio Preview](/home.png) <!-- Replace with actual screenshot if you want -->
+![Portfolio Preview](./public/home.png) <!-- Replace with actual screenshot if you want -->
 
 ## 💡 Inspiration
 This portfolio was built to reflect my personality, technical skillset, and creativity in one place. It's a constant work in progress — just like every developer’s journey.
