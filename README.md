@@ -1,6 +1,11 @@
 # 🖥️ Vranda Garg - Developer Portfolio
 
+![Portfolio Preview](./public/home.png) <!-- Replace with actual screenshot if you want -->
+
 Welcome to my personal developer portfolio website!
+
+## 🔗 Live Demo
+[Check out the website here](https://vrandagarg.me/) 
 
 ## 🚀 Tech Stack
 - **Frontend:** React.js
@@ -16,12 +21,6 @@ Welcome to my personal developer portfolio website!
 - ✉️ Contact form with a friendly "Let’s Connect" layout
 - 🖱️ Custom animated cursor and smooth scroll behavior
 - 🌙 Dark-themed, modern UI with yellow accents
-
-## 🔗 Live Demo
-[Check out the website here](https://vrandagarg.me/) <!-- Replace # with your actual deployed link -->
-
-## 📸 Sneak Peek
-![Portfolio Preview](./public/home.png) <!-- Replace with actual screenshot if you want -->
 
 ## 💡 Inspiration
 This portfolio was built to reflect my personality, technical skillset, and creativity in one place. It's a constant work in progress — just like every developer’s journey.
