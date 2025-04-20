@@ -1,8 +1,8 @@
-# 🖥️ Vranda Garg - Developer Portfolio
+# 🖥️ Vranda Garg - Portfolio
 
 ![Portfolio Preview](./public/home.png) <!-- Replace with actual screenshot if you want -->
 
-Welcome to my personal developer portfolio website!
+Welcome to my personal portfolio website!
 
 ## 🔗 Live Demo
 [Check out the website here](https://vrandagarg.me/) 
