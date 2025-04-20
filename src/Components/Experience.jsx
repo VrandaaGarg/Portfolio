@@ -15,6 +15,15 @@ const experience = [
   {
     role: "Certificate of Excellence",
     company: "Manipal University Jaipur",
+    duration: "April-2025",
+    description:
+      "I was awarded the Certificate of Excellence for securing the 9.6 gpa in my 3rd semester of B.Tech in Computer Science and Engineering.",
+    technologies: [],
+    logo: "/deanList3sem.jpeg",
+  },
+  {
+    role: "Certificate of Excellence",
+    company: "Manipal University Jaipur",
     duration: "November-2024",
     description:
       "I was awarded the Certificate of Excellence for securing the 9.89 gpa in my 2nd semester of B.Tech in Computer Science and Engineering.",

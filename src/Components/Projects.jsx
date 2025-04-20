@@ -6,15 +6,15 @@ import LazyImage from "./LazyImage";
 
 const projects = [
   {
-    name: "Intellica",
-    image: "/Intellica.png",
-    liveDemo: "https://intellica.ayush-sharma.in/",
-    codeUrl: "https://github.com/CyberBoyAyush/intellica",
+    name: "SmartBite",
+    image: "/smartbite.png",
+    liveDemo: "https://smartbite.vrandagarg.me/",
+    codeUrl: "https://github.com/VrandaaGarg/Twiggy",
     description:
-      "AI powered learning platform.Transform your learning with AI-powered tools that help you to understand and remember the concepts better. 🚀🧠",
+      "SmartBite is a full-stack restaurant food ordering system tailored for a single restaurant owner. From browsing dishes to placing orders, from managing dishes to viewing customers, it handles it all — with an intuitive UI and a smooth, animated experience.",
   },
   {
-    name: "Aarcadia",
+    name: "Arcadia",
     image: "/aarcadia.png",
     liveDemo: "https://aarcadia.vercel.app/",
     codeUrl: "https://github.com/VrandaaGarg/Arcadia",
@@ -22,20 +22,26 @@ const projects = [
       "A Gaming hub where users can create a profile and enjoy both single-player and two-player games. Compete with others, track your progress, and climb the leaderboard to see your ranking! 🚀🎮",
   },
   {
-    name: "SmartBite",
-    image: "/SmartBite.png",
-    liveDemo: "https://smartbite.vrandagarg.me/",
-    codeUrl: "https://github.com/VrandaaGarg/Twiggy",
+    name: "PathGenie",
+    image: "/PathGenie.png",
+    liveDemo: "https://pathgenie.ayush-sharma.in/",
+    codeUrl: "https://github.com/Glucon-D/PathGenie",
     description:
-      "A modern and efficient food ordering solution.SmartBite offers a seamless experience for both customers and restaurant owners. Streamlining operations and enhancing customer satisfaction",
+      "PathGenie is an AI-powered web application that helps students discover and pursue personalized learning paths tailored to their skills, interests, age, and career goals.",
   },
   {
-    name: "Portfolio",
-    image: "/portfolio.png",
-    liveDemo: "https://vrandagarg.me/",
-    codeUrl: "https://github.com/VrandaaGarg/Portfolio",
-    description:
-      "Explore my portfolio showcasing my dynamic web projects,achievements and Coding stats",
+    name: "FinWise",
+    image: "/Finwise.png",
+    liveDemo: "https://finwise.ayush-sharma.in",
+    codeUrl: "https://github.com/Glucon-D/FinWise",
+    description:"FinWise is an AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals. Powered by Gemini AI, real-time gold prices, and a clean UI — FinWise explains everything in a way even an 18-year-old can understand."
+  },
+  {
+    name: "Intellica",
+    image: "/Intellica.png",
+    liveDemo: "https://intellica.ayush-sharma.in/",
+    codeUrl: "https://github.com/CyberBoyAyush/intellica",
+    description:"Intellica is an AI-powered personalized learning platform designed to enhance user learning through intelligent learning paths, quizzes, and flashcards. With Gemini AI, users get dynamic explanations, and with gamification, learning becomes engaging and fun!"
   },
 
   {
@@ -45,14 +51,6 @@ const projects = [
     codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
     description:
       "A website designed to help individuals and communities embrace a sustainable lifestyle.",
-  },
-  {
-    name: "NexRide",
-    image: "/nexride.png",
-    liveDemo: "https://nexride.vrandagarg.me/",
-    codeUrl: "https://github.com/VrandaaGarg/NexRide",
-    description:
-      "NexRide revolutionizes electric 2-wheeler delivery logistics with smart model selection . Our system ensures efficiency, transparency, and a seamless user experience for both customers and sellers.",
   },
 ];
 
