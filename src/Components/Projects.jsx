@@ -6,6 +6,14 @@ import LazyImage from "./LazyImage";
 
 const projects = [
   {
+    name: "ResuMate",
+    image: "/resumate.png",
+    liveDemo: "https://resumate.vrandagarg.me/",
+    codeUrl: "https://github.com/VrandaaGarg/ResuMate",
+    description:
+      "ResuMate is an intelligent, AI-powered platform that helps users build, optimize, and perfect their resumes to stand out in today’s competitive job market.With a live editor, customizable formatting, and Gemini AI integration, users can create professional, ATS-friendly resumes while receiving real-time feedback and suggestions.",
+  },
+  {
     name: "SmartBite",
     image: "/smartbite.png",
     liveDemo: "https://smartbite.vrandagarg.me/",
@@ -22,36 +30,38 @@ const projects = [
       "A Gaming hub where users can create a profile and enjoy both single-player and two-player games. Compete with others, track your progress, and climb the leaderboard to see your ranking! 🚀🎮",
   },
   {
-    name: "PathGenie",
-    image: "/PathGenie.png",
-    liveDemo: "https://pathgenie.ayush-sharma.in/",
-    codeUrl: "https://github.com/Glucon-D/PathGenie",
+    name: "SkillCompass",
+    image: "/skillcompass.png",
+    liveDemo: "https://skillcompass.glucon-d.xyz/",
+    codeUrl: "https://github.com/Glucon-D/SkillCompass",
     description:
-      "PathGenie is an AI-powered web application that helps students discover and pursue personalized learning paths tailored to their skills, interests, age, and career goals.",
+      "SkillCompass is an AI-powered learning platform that creates personalized, interactive learning paths based on your skills and career goals. With real-time feedback, gamified progress tracking, and adaptive quizzes, SkillCompass helps you learn efficiently—anytime, anywhere. Join a global community and earn certificates recognized by top companies.",
   },
   {
     name: "FinWise",
     image: "/Finwise.png",
     liveDemo: "https://finwise.ayush-sharma.in",
     codeUrl: "https://github.com/Glucon-D/FinWise",
-    description:"FinWise is an AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals. Powered by Gemini AI, real-time gold prices, and a clean UI — FinWise explains everything in a way even an 18-year-old can understand."
+    description:
+      "FinWise is an AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals. Powered by Gemini AI, real-time gold prices, and a clean UI — FinWise explains everything in a way even an 18-year-old can understand.",
   },
   {
     name: "Intellica",
     image: "/Intellica.png",
     liveDemo: "https://intellica.ayush-sharma.in/",
     codeUrl: "https://github.com/CyberBoyAyush/intellica",
-    description:"Intellica is an AI-powered personalized learning platform designed to enhance user learning through intelligent learning paths, quizzes, and flashcards. With Gemini AI, users get dynamic explanations, and with gamification, learning becomes engaging and fun!"
+    description:
+      "Intellica is an AI-powered personalized learning platform designed to enhance user learning through intelligent learning paths, quizzes, and flashcards. With Gemini AI, users get dynamic explanations, and with gamification, learning becomes engaging and fun!",
   },
 
-  {
-    name: "EcoVatika",
-    image: "/Ecovatika.png",
-    liveDemo: "https://ecovatika.vrandagarg.me/",
-    codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
-    description:
-      "A website designed to help individuals and communities embrace a sustainable lifestyle.",
-  },
+  // {
+  //   name: "EcoVatika",
+  //   image: "/Ecovatika.png",
+  //   liveDemo: "https://ecovatika.vrandagarg.me/",
+  //   codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
+  //   description:
+  //     "A website designed to help individuals and communities embrace a sustainable lifestyle.",
+  // },
 ];
 
 function Projects() {

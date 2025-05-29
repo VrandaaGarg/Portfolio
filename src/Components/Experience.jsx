@@ -1,12 +1,29 @@
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa6";
-import LazyImage from './LazyImage';
+import LazyImage from "./LazyImage";
 
 const experience = [
   {
+    name: "Winner in Hackerzstreet 3.0",
+    role: "Co-Lead",
+    company: "IEEE SB MUJ",
+    duration: "April 2025",
+    description:
+      "We built a comprehensive web application that helps students discover and pursue personalized learning paths tailored to their skills, interests, age, and career goals. The platform features AI-driven quizzes, flashcards, and a dynamic learning experience that adapts to each user's progress.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Gemini API",
+      "Groq API",
+      "Appwrite",
+    ],
+    logo: "/hackerstreetz.jpg",
+  },
+  {
     company: "Randomize",
     role: "Webmaster",
-    duration: "june 2024 - Present",
+    duration: "june 2024 - April 2025",
     description:
       "As the Webmaster of Randomize, I oversee all frontend-related workshops, empowering members with the latest web development technologies. I also manage and maintain the club's website, ensuring a seamless and engaging online presence for our community.",
     technologies: ["React", "Tailwind CSS", "Javascript", "Github"],

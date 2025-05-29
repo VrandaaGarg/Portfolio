@@ -20,8 +20,11 @@ import {
   SiCplusplus,
   SiC,
   SiGithub,
+  SiAppwrite,
+  SiFirebase,
 } from "react-icons/si";
 import { AiOutlineCode } from "react-icons/ai";
+import { GrMysql } from "react-icons/gr";
 
 const skills = [
   {
@@ -79,6 +82,21 @@ const skills = [
     name: "Django",
     icon: <SiDjango />,
     bgColor: "#037514",
+  },
+  {
+    name: "Appwrite",
+    icon: <SiAppwrite />,
+    bgColor: "#de2166",
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase />,
+    bgColor: "#FFCA28",
+  },
+  {
+    name: "MySQL",
+    icon: <GrMysql />,
+    bgColor: "#4479A1",
   },
   {
     name: "Node.js",

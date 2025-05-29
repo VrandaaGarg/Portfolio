@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaCode,
   FaTerminal,
+  FaTwitter,
 } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { GoHeartFill } from "react-icons/go";
@@ -51,26 +52,26 @@ function Footer() {
         duration: 3,
         repeat: Infinity,
         ease: "easeInOut",
-      }
-    }
+      },
+    },
   };
 
   const glowAnimation = {
-    initial: { 
-      boxShadow: "0 0 0 rgba(255, 194, 13, 0)" 
+    initial: {
+      boxShadow: "0 0 0 rgba(255, 194, 13, 0)",
     },
     animate: {
       boxShadow: [
         "0 0 10px rgba(255, 194, 13, 0.2)",
         "0 0 20px rgba(255, 194, 13, 0.4)",
-        "0 0 10px rgba(255, 194, 13, 0.2)"
+        "0 0 10px rgba(255, 194, 13, 0.2)",
       ],
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   const rotateAnimation = {
@@ -79,33 +80,33 @@ function Footer() {
   };
 
   const socials = [
-    { 
-      icon: FaGithub, 
-      url: "https://github.com/VrandaaGarg", 
+    {
+      icon: FaGithub,
+      url: "https://github.com/VrandaaGarg",
       color: "#f5f5f5",
       bgColor: "#333333",
-      delay: 0 
+      delay: 0,
     },
     {
       icon: FaLinkedin,
-      url: "https://www.linkedin.com/in/vranda-garg-b68011293/",
+      url: "https://www.linkedin.com/in/vrandagarg/",
       color: "#ffffff",
       bgColor: "#0A66C2",
-      delay: 0.2
+      delay: 0.2,
     },
     {
-      icon: FaInstagram,
-      url: "https://www.instagram.com/vranda_garg",
+      icon: FaTwitter,
+      url: "https://x.com/vranda_garg_",
       color: "#ffffff",
       bgColor: "#E4405F",
-      delay: 0.4
+      delay: 0.4,
     },
-    { 
-      icon: CiMail, 
-      url: "mailto:vrandacodz@gmail.com", 
+    {
+      icon: CiMail,
+      url: "mailto:connect@vrandacodz.xyz",
       color: "#ffffff",
       bgColor: "#FFC20D",
-      delay: 0.6 
+      delay: 0.6,
     },
   ];
 
@@ -221,7 +222,7 @@ function Footer() {
                   style={{
                     backgroundColor: social.bgColor,
                     color: social.color,
-                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
                   }}
                   whileHover={{
                     scale: 1.2,
@@ -231,19 +232,19 @@ function Footer() {
                   transition={{
                     type: "spring",
                     stiffness: 300,
-                    damping: 15
+                    damping: 15,
                   }}
                 >
                   <motion.div
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.1],
-                      rotate: [-5, 5]
+                      rotate: [-5, 5],
                     }}
                     transition={{
                       duration: 2,
                       repeat: Infinity,
                       repeatType: "reverse",
-                      ease: "easeInOut"
+                      ease: "easeInOut",
                     }}
                   >
                     <social.icon />
