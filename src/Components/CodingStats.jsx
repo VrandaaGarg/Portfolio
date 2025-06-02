@@ -64,7 +64,7 @@ function CodingStats() {
         <div className="py-12">
           {githubData ? (
             <div className="">
-              <div className="flex flex-wrap gap-3  md:flex-col-2 items-center justify-between mx-auto ">
+              <div className="flex flex-wrap gap-3  md:flex-col-2 items-center justify-center mx-auto ">
                 <motion.picture
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ function CodingStats() {
                     damping: 10,
                     stiffness: 100,
                   }}
-                  className="border p-4 z-10 bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg md:px-7"
+                  className="border  z-10 bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg md:px-7"
                 >
                   <source
                     srcset="https://github-readme-stats.vercel.app/api?username=Vrandaagarg&show_icons=true&bg_color=00000000&text_color=ffffff&icon_color=FFD557&title_color=EB9F33&border_color=FAF7E7&hide_border=true"
@@ -108,7 +108,7 @@ function CodingStats() {
                     damping: 10,
                     stiffness: 100,
                   }}
-                  className="border z-10 bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg p-4 md:px-7"
+                  className="border z-10 bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg  md:px-7"
                 >
                   <source
                     srcset="https://nirzak-streak-stats.vercel.app?user=VrandaaGarg&theme=dark&hide_border=true&background=00000000&ring=FFD557&currStreakLabel=EB9F33"
