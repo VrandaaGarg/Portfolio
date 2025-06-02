@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPaperPlane, FaCheck } from "react-icons/fa";
-import { BsEnvelopePaper, BsStars } from "react-icons/bs";
-import { HiSparkles } from "react-icons/hi2";
 import { IoSparkles } from "react-icons/io5";
-import { TbLineDotted, TbCircleDotted } from "react-icons/tb";
+import { TbCircleDotted } from "react-icons/tb";
 import { MdMessage } from "react-icons/md";
 import { TbMessages } from "react-icons/tb";
 

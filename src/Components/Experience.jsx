@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa6";
 import LazyImage from "./LazyImage";
-import { TbLineDotted, TbCircleDotted } from "react-icons/tb";
+import { TbCircleDotted } from "react-icons/tb";
 import { HiAcademicCap } from "react-icons/hi2";
 import { LuCodeXml } from "react-icons/lu";
 
@@ -28,7 +27,7 @@ const experience = [
   {
     company: "Randomize",
     role: "Webmaster",
-    duration: "june 2024 - April 2025",
+    duration: "June 2024 - April 2025",
     description:
       "As Webmaster at Randomize, I lead frontend workshops and manage the club website, keeping our community’s online presence seamless and up to date.",
     technologies: ["React", "Tailwind CSS", "Javascript", "Github"],
@@ -57,8 +56,8 @@ const experience = [
   // },
   {
     role: "BrandIT",
-    company: "IEEE",
-    duration: "july 2024",
+    company: "IEEE WIE MUJ",
+    duration: "July 2024",
     description:
       "I secured 3rd position in the BrandIT competition organized by IEEE, where I developed a website named EvoVatika ",
     technologies: ["React", "Tailwind CSS", "Javascript", "HTML", "CSS"],

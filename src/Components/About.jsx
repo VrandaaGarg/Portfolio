@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGithub, FaBriefcase } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { FaHandPeace, FaArrowRight } from "react-icons/fa6";
 import { HiDocumentDownload } from "react-icons/hi";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 import LazyImage from "./LazyImage";
 import { MdArrowForward } from "react-icons/md";
 import { FaQuoteLeft } from "react-icons/fa";
-import { useScroll } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 const texts = [
   "Full Stack Developer.",
@@ -20,7 +18,6 @@ import { IoMdContacts } from "react-icons/io";
 
 function About() {
   const [displayText, setDisplayText] = useState("");
-  const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

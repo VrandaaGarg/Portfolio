@@ -1,11 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import GitHubContributions from "./GitHubContributions";
-import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
-import { PiSmileySad } from "react-icons/pi";
-import LazyImage from "./LazyImage";
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 

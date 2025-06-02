@@ -11,6 +11,8 @@ import { RiCompassDiscoverFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import { GiCash } from "react-icons/gi";
 import { RiBrainLine } from "react-icons/ri";
+import { HiCode } from "react-icons/hi";
+import { GiThreeLeaves } from "react-icons/gi";
 
 const projects = [
   {
@@ -22,7 +24,7 @@ const projects = [
     codeUrl: "https://github.com/VrandaaGarg/ResuMate",
     description:
       "ResuMate is an AI-powered platform for building professional, ATS-friendly resumes with live editing, smart formatting, and real-time feedback.",
-    tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "AI Integration"],
+    tech: ["React", "Tailwind CSS", "Framer Motion", "Firebase", "OpenAI API"],
     left: true,
   },
   {
@@ -34,7 +36,14 @@ const projects = [
     codeUrl: "https://github.com/VrandaaGarg/SmartBite",
     description:
       "SmartBite is a full-stack food ordering app for single restaurants, offering seamless menu browsing, order management, and customer tracking—all ",
-    tech: ["Next.js", "Express", "MongoDB", "JWT", "Stripe"],
+    tech: [
+      "React JS",
+      "Tailwind CSS",
+      "Nodejs",
+      "ExpressJS",
+      "MySQL",
+      "Framer Motion",
+    ],
     left: false,
   },
   {
@@ -46,7 +55,14 @@ const projects = [
     codeUrl: "https://github.com/VrandaaGarg/Arcadia",
     description:
       "A Gaming hub where users can create a profile and enjoy both single-player and two-player games. Compete with others, track your progress, and climb the leaderboard to see your ranking! 🚀🎮",
-    tech: ["React", "Firebase", "Framer Motion", "Socket.io", "Tailwind CSS"],
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ],
     left: true,
   },
   {
@@ -58,7 +74,7 @@ const projects = [
     codeUrl: "https://github.com/Glucon-D/SkillCompass",
     description:
       "SkillCompass is an AI-powered platform that personalizes your learning journey with interactive modules, adaptive quizzes, and real-time feedback—helping you achieve your career goals efficiently and earn recognized certificates.",
-    tech: ["React", "Gemini API", "Express", "MongoDB", "Tailwind CSS"],
+    tech: ["React", "Gemini API", "Tailwind CSS", "Framer Motion", "Appwrite"],
     left: false,
   },
   {
@@ -70,8 +86,27 @@ const projects = [
     codeUrl: "https://github.com/Glucon-D/FinWise",
     description:
       "FinWise is an AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals. Powered by Gemini AI, real-time gold prices, and a clean UI — FinWise explains everything in a way even an 18-year-old can understand.",
-    tech: ["React", "Gemini AI", "Financial APIs", "Tailwind CSS", "Chart.js"],
+    tech: [
+      "React",
+      "Gemini AI",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Chart.js",
+      "Appwrite",
+    ],
     left: true,
+  },
+  {
+    name: "Portfolio",
+    image: "/2.png",
+    icon: <HiCode />,
+    iconColor: "#FFC519",
+    liveDemo: "https://vrandagarg.me/",
+    codeUrl: "https://github.com/VrandaaGarg/Portfolio",
+    description:
+      "This portfolio showcases my skills, projects, and experiences. It features a modern design with smooth animations, responsive layout, and interactive elements to provide an engaging user experience.",
+    tech: ["React", "Tailwind CSS", "Framer Motion", "React icon"],
+    left: false,
   },
   {
     name: "Intellica",
@@ -82,18 +117,28 @@ const projects = [
     codeUrl: "https://github.com/CyberBoyAyush/intellica",
     description:
       "Intellica is an AI-powered personalized learning platform designed to enhance user learning through intelligent learning paths, quizzes, and flashcards. With Gemini AI, users get dynamic explanations, and with gamification, learning becomes engaging and fun!",
-    tech: ["Next.js", "Gemini API", "MongoDB", "Tailwind CSS", "Framer Motion"],
-    left: false,
+    tech: [
+      "React JS",
+      "Gemini API",
+      "Appwrite",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    left: true,
   },
 
-  // {
-  //   name: "EcoVatika",
-  //   image: "/Ecovatika.png",
-  //   liveDemo: "https://ecovatika.vrandagarg.me/",
-  //   codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
-  //   description:
-  //     "A website designed to help individuals and communities embrace a sustainable lifestyle.",
-  // },
+  {
+    name: "EcoVatika",
+    image: "/Ecovatika.png",
+    icon: <GiThreeLeaves />,
+    iconColor: "#69B923",
+    tech: ["React", "Tailwind CSS", "NodeJS", "ExpressJS", " MongoDB"],
+    left: false,
+    liveDemo: "https://ecovatika.vrandagarg.me/",
+    codeUrl: "https://github.com/VrandaaGarg/EcoVatika",
+    description:
+      "A website designed to help individuals and communities embrace a sustainable lifestyle.",
+  },
 ];
 
 function Projects({ showAll = false }) {

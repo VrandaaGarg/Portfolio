@@ -2,19 +2,10 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { GoHeartFill } from "react-icons/go";
-import { IoGameControllerOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { RiCodeSSlashLine } from "react-icons/ri";
 
 function Footer() {
-  const socialVariants = {
-    hover: {
-      y: -3,
-      scale: 1.1,
-      transition: { duration: 0.2 },
-    },
-  };
-
   const nameVariants = {
     initial: { backgroundPosition: "0% 50%" },
     animate: {

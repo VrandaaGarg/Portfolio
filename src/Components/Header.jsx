@@ -2,15 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaCode,
-  FaUser,
-  FaBriefcase,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaBriefcase } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 // import { LuSparks } from "react-icons/lu";
 import { IoGameControllerOutline } from "react-icons/io5";

@@ -12,8 +12,7 @@ import {
   FaGitAlt,
 } from "react-icons/fa";
 import { WiStars } from "react-icons/wi";
-import { TbLineDotted } from "react-icons/tb";
-import { TbCircleDotted } from "react-icons/tb";
+import { TbLineDotted, TbCircleDotted } from "react-icons/tb";
 import {
   SiTailwindcss,
   SiMongodb,
@@ -26,7 +25,6 @@ import {
   SiAppwrite,
   SiFirebase,
 } from "react-icons/si";
-import { AiOutlineCode } from "react-icons/ai";
 import { GrMysql } from "react-icons/gr";
 import { IoSparkles } from "react-icons/io5";
 
