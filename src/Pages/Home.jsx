@@ -12,7 +12,7 @@ export default function Home() {
       <About />
       <Skills />
       <CodingStats />
-      <Projects />
+      <Projects showAll={false} />
       <Experience />
       <Contact />
     </div>

@@ -1,6 +1,6 @@
 import "./index.css";
 import "./App.css";
-import Headers from "./Components/Header";
+import Header from "./Components/Header"; // Updated from Headers to Header to match component name
 import Footer from "./Components/Footer";
 import "@fontsource/josefin-sans"; // Default weight (400)
 import { useState, useEffect } from "react";
@@ -60,10 +60,10 @@ function App() {
         className="relative overflow-x-hidden"
         style={{ fontFamily: "Josefin Sans, sans-serif" }}
       >
-        <Headers />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="projects" element={<Projects showAll={true} />} />
         </Routes>
         <Footer />
       </div>
