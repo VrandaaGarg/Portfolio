@@ -11,6 +11,9 @@ import {
   FaJava,
   FaGitAlt,
 } from "react-icons/fa";
+import { WiStars } from "react-icons/wi";
+import { TbLineDotted } from "react-icons/tb";
+import { TbCircleDotted } from "react-icons/tb";
 import {
   SiTailwindcss,
   SiMongodb,
@@ -25,6 +28,7 @@ import {
 } from "react-icons/si";
 import { AiOutlineCode } from "react-icons/ai";
 import { GrMysql } from "react-icons/gr";
+import { IoSparkles } from "react-icons/io5";
 
 const skills = [
   {
@@ -99,6 +103,11 @@ const skills = [
     bgColor: "#4479A1",
   },
   {
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    bgColor: "#4DB33D",
+  },
+  {
     name: "Node.js",
     icon: <FaNodeJs />,
     bgColor: "#68A063",
@@ -108,11 +117,7 @@ const skills = [
     icon: <SiExpress />,
     bgColor: "black",
   },
-  {
-    name: "MongoDB",
-    icon: <SiMongodb />,
-    bgColor: "#4DB33D",
-  },
+
   {
     name: "Git",
     icon: <FaGitAlt />,
@@ -126,46 +131,91 @@ const skills = [
 ];
 const Skills = () => {
   return (
-    <div id="Skills" className="">
-      <h1 className="text-3xl md:text-5xl text-center mb-7 md:mb-9 mt-24 md:mt-36 font-semibold text-[#FFC20D]">
-        Skills
-        <motion.span
-          animate={{ rotate: [0, 10, -10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="inline-block ml-2"
-        >
-          <AiOutlineCode className=" text-[#FFC20D]" />
-        </motion.span>
-      </h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 p-6 md:px-24 justify-center items-center">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ type: "spring", stiffness: 200, damping: 10 }}
-            className="flex flex-col items-center bg-[#1c1c1c]/70 hover:shadow-amber-100/5 hover:bg-[#FFD557]/10 border-[#FAF7E7] border-1 justify-center p-4 rounded-xl shadow-lg cursor-pointer"
-          >
-            <motion.div
-              key={index}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: [0, 20, -20, 0] }} // To and Fro Effect
-              transition={{
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 1,
-                ease: "linear",
-              }}
-              className="text-white text-4xl"
-              style={{
-                color: skill.bgColor,
-              }}
-            >
-              {skill.icon}
-            </motion.div>
+    <div
+      id="Skills"
+      className="bg-zinc-900 min-h-screen w-full overflow-hidden"
+    >
+      <div className="rounded-4xl min-h-screen  overflow-hidden relative bg-zinc-800 py-24">
+        <TbLineDotted className="text-amber-300 rotate-12 text-3xl absolute top-10 right-14 " />
+        <motion.div
+          initial={{ rotate: 0, scale: 0.9 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear",
+          }}
+          className="h-64 w-64 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -top-7 -right-24"
+        ></motion.div>
 
-            <p className="text-white mt-2 font-semibold">{skill.name}</p>
-          </motion.div>
-        ))}
+        <motion.div
+          initial={{ rotate: 0, scale: 0.9 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear",
+          }}
+          className="h-80 w-80 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -bottom-7 -left-24"
+        ></motion.div>
+
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="absolute bottom-10 left-14"
+          style={{ display: "inline-block" }} // ensures the rotation is centered
+        >
+          <TbCircleDotted className="text-amber-300/55 text-5xl" />
+        </motion.div>
+        <h1 className="text-3xl   md:text-5xl pb-12 text-center  font-semibold text-amber-300">
+          <span className="relative bg-clip-text text-transparent  bg-gradient-to-r from-amber-500 to-amber-300">
+            Skills{" "}
+            <motion.span
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="ml-2 -top-6 -right-14 absolute"
+            >
+              <WiStars className=" text-amber-100 text-5xl" />
+            </motion.span>
+          </span>
+        </h1>
+        <div className="flex justify-center items-center">
+          <div className=" grid grid-cols-2 md:grid-cols-5 align-middle gap-2 px-11 max-w-5xl justify-center items-center">
+            {skills.map((skill, index) => (
+              <motion.div
+                whileHover={{ scale: 1.02, x: -2, y: -2, rotate: 2 }}
+                whileTap={{ scale: 0.98, rotate: -2 }}
+                key={index}
+                transition={{ type: "spring", stiffness: 220, damping: 16 }}
+                style={{
+                  zIndex: 2,
+                }}
+                className="flex  items-center justify-start h-full -bg-linear-60 via-zinc-900 from-zinc-800  to-zinc-900 backdrop-blur-md border border-yellow-400/40 rounded-xl p-2"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.13, rotate: 8 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                  className="text-white text-xl rounded-xl  flex items-center justify-center w-12 h-12 mr-4 bg-white/10 backdrop-blur-md border border-white/10 shadow-inner"
+                  style={{
+                    color: skill.bgColor,
+                  }}
+                >
+                  {skill.icon}
+                </motion.div>
+                <span className="text-white font-semibold text-base">
+                  {skill.name}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

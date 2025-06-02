@@ -28,14 +28,14 @@ html,
 body {
   overflow-x: hidden;
   min-height: 100vh;
-  background-color: #121212;
+
   margin: 0;
   padding: 0;
 }
 
 #root {
   min-height: 100vh;
-  background-color: #121212;
+
   position: relative;
   overflow: hidden;
 }
@@ -61,13 +61,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #FFD557, #FFC20D);
+  background: linear-gradient(to bottom, #ffd557, #ffc20d);
   border-radius: 5px;
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #FFC20D, #FFD557);
+  background: linear-gradient(to bottom, #ffc20d, #ffd557);
 }
 
 ::-webkit-scrollbar-track {
@@ -78,52 +78,57 @@ body {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #FFC20D #121212;
+  scrollbar-color: #ffc20d #121212;
 }
 
-/* Custom Cursor Styles */
-.cursor-dot {
-  pointer-events: none;
-  position: fixed;
-  z-index: 9999;
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(45deg, #FFD557, #FFC20D);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 8px rgba(255, 194, 13, 0.6));
-  backdrop-filter: blur(4px);
-}
-
-.cursor-ring {
-  pointer-events: none;
-  position: fixed;
-  z-index: 9998;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #FFC20D;
-  border-radius: 50%;
-  opacity: 0.6;
-  filter: drop-shadow(0 0 15px rgba(255, 194, 13, 0.3));
-  transform-origin: center center;
-}
+/* Default cursor will be used instead of custom cursor */
 
 @media (hover: none) {
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-}
-
-/* Hide default cursor on desktop */
-@media (hover: hover) {
-  * {
-    cursor: none !important;
-  }
+  /* Mobile styles */
 }
 
 /* Add smooth scroll class */
 .smooth-scroll {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* For iOS smooth scrolling */
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blink 1s step-start infinite;
+  width: 2px;
+  height: 1.2em;
+  background-color: currentColor;
+  vertical-align: bottom;
+}
+
+@keyframes shine {
+  0% {
+    left: -60%;
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.22;
+  }
+  60% {
+    left: 120%;
+    opacity: 0.22;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+.animate-shine {
+  animation: shine 1s linear forwards;
 }

@@ -66,9 +66,9 @@ const GitHubHeatmap = () => {
         damping: 10,
         stiffness: 100,
       }}
-      className="max-w-5xl p-2  md:p-9 mx-1 md:mx-auto border-[#FAF7E7] border-[1px] mt-6 text-[#FFC20D] rounded-sm bg-[#242424]"
+      className="max-w-full p-2 my-3.5  md:p-9 mx-1 md:mx-auto  border bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg"
     >
-      <h2 className="text-center text-lg md:text-2xl font-semibold mb-4">
+      <h2 className="text-left text-[#EB9F33] text-lg md:text-2xl font-semibold mb-4">
         GitHub Contributions
       </h2>
 

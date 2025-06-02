@@ -2,15 +2,11 @@ import "./index.css";
 import "./App.css";
 import Headers from "./Components/Header";
 import Footer from "./Components/Footer";
-import About from "./Components/About";
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import Experience from "./Components/Experience";
-import CodingStats from "./Components/CodingStats";
-import CustomCursor from "./Components/CustomCursor";
 import "@fontsource/josefin-sans"; // Default weight (400)
 import { useState, useEffect } from "react";
+import Home from "./Pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Projects from "./Components/Projects";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -59,20 +55,19 @@ function App() {
   return loading ? (
     <Loader />
   ) : (
-    <div
-      className="bg-[#121212] min-h-screen w-full relative overflow-x-hidden"
-      style={{ fontFamily: "Josefin Sans, sans-serif" }}
-    >
-      <CustomCursor />
-      <Headers />
-      <About />
-      <Skills />
-      <CodingStats />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div
+        className="relative overflow-x-hidden"
+        style={{ fontFamily: "Josefin Sans, sans-serif" }}
+      >
+        <Headers />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
