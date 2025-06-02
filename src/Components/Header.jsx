@@ -14,6 +14,7 @@ import {
 import { HiDocumentDownload } from "react-icons/hi";
 // import { LuSparks } from "react-icons/lu";
 import { IoGameControllerOutline } from "react-icons/io5";
+import { RiCodeSSlashLine } from "react-icons/ri";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -102,7 +103,7 @@ const Header = () => {
         scale: headerScale,
         backdropFilter: `blur(${headerBlur}px)`,
       }}
-      className={`fixed top-2 left-0 right-0 z-50 mx-auto w-[95%] max-w-7xl 
+      className={`fixed top-2 left-0 right-0 z-50 mx-3 md:mx-auto md:w-[75%] max-w-7xl 
                   transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}
     >
       <motion.nav
@@ -110,7 +111,7 @@ const Header = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className={`mx-auto px-4 sm:px-6 bg-zinc-900/70 backdrop-blur-lg
-                   rounded-2xl border border-zinc-800/50 ${
+                   rounded-full border border-zinc-700/50 ${
                      scrolled ? "shadow-lg shadow-black/10" : ""
                    }`}
       >
@@ -128,7 +129,7 @@ const Header = () => {
                 whileHover={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                <IoGameControllerOutline className="text-amber-400 text-2xl md:text-3xl" />
+                <RiCodeSSlashLine className="text-amber-400 text-2xl md:text-3xl" />
               </motion.div>
               <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
                 Vranda Garg
@@ -242,7 +243,7 @@ const Header = () => {
 
         {/* Mobile menu, show/hide based on menu state */}
         <motion.div
-          className="md:hidden absolute top-full right-0 w-64 mt-2 bg-zinc-900/95 backdrop-blur-lg border border-zinc-800/50 rounded-xl overflow-hidden"
+          className="md:hidden absolute top-full right-0 w-full mt-2 bg-zinc-900/95 backdrop-blur-lg border border-zinc-800/50 rounded-xl overflow-hidden"
           initial="closed"
           animate={isMobileMenuOpen ? "open" : "closed"}
           variants={mobileMenuVariants}

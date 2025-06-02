@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaCode,
-  FaTerminal,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { GoHeartFill } from "react-icons/go";
-import { BsCodeSquare } from "react-icons/bs";
-import { motion, AnimatePresence } from "framer-motion";
+import { IoGameControllerOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { RiCodeSSlashLine } from "react-icons/ri";
 
 function Footer() {
   const socialVariants = {
@@ -33,58 +27,13 @@ function Footer() {
     },
   };
 
-  const codeIconVariants = {
-    animate: {
-      rotate: [0, 10, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const floatingAnimation = {
-    initial: { y: 0 },
-    animate: {
-      y: [-5, 5, -5],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const glowAnimation = {
-    initial: {
-      boxShadow: "0 0 0 rgba(255, 194, 13, 0)",
-    },
-    animate: {
-      boxShadow: [
-        "0 0 10px rgba(255, 194, 13, 0.2)",
-        "0 0 20px rgba(255, 194, 13, 0.4)",
-        "0 0 10px rgba(255, 194, 13, 0.2)",
-      ],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const rotateAnimation = {
-    initial: { rotate: 0 },
-    animate: { rotate: 10 },
-  };
-
   const socials = [
     {
       icon: FaGithub,
       url: "https://github.com/VrandaaGarg",
       color: "#f5f5f5",
       bgColor: "#333333",
+      label: "GitHub",
       delay: 0,
     },
     {
@@ -92,47 +41,39 @@ function Footer() {
       url: "https://www.linkedin.com/in/vrandagarg/",
       color: "#ffffff",
       bgColor: "#0A66C2",
-      delay: 0.2,
+      label: "LinkedIn",
+      delay: 0.1,
     },
     {
       icon: FaTwitter,
       url: "https://x.com/vranda_garg_",
       color: "#ffffff",
-      bgColor: "#E4405F",
-      delay: 0.4,
+      bgColor: "#1DA1F2",
+      label: "Twitter",
+      delay: 0.2,
     },
     {
       icon: CiMail,
       url: "mailto:connect@vrandacodz.xyz",
       color: "#ffffff",
       bgColor: "#FFC20D",
-      delay: 0.6,
+      label: "Email",
+      delay: 0.3,
     },
   ];
-
-  const codingIcons = [
-    { icon: FaCode, color: "#61DAFB" },
-    { icon: BsCodeSquare, color: "#38B2AC" },
-    { icon: FaTerminal, color: "#F7DF1E" },
-  ];
-
-  const socialContainerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
 
   const socialItemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1 },
+    hidden: { y: 10, opacity: 0 },
+    show: (i) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+      },
+    }),
     hover: {
       y: -5,
-      scale: 1.2,
       transition: {
         type: "spring",
         stiffness: 300,
@@ -144,39 +85,22 @@ function Footer() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full bg-[#121212] border-t border-b-[#1c1c1c] shadow-md shadow-[#1c1c1c]/40"
+      className="w-full bg-zinc-950/95 border-t border-zinc-800/50"
     >
-      <footer className="max-w-7xl mx-auto py-8 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center">
-        <motion.h1
+      <footer className="max-w-5xl mx-auto py-4 px-4 flex flex-col sm:flex-row justify-between items-center">
+        {/* Logo and Name */}
+        <motion.div
           variants={nameVariants}
           initial="initial"
           animate="animate"
-          className="text-xl md:text-3xl font-bold mb-4 md:mb-0 
-                    bg-gradient-to-r from-[#FFD557] to-[#FFC20D] bg-clip-text text-transparent
-                    flex items-center gap-2 tracking-tight"
+          className="flex items-center mb-3 sm:mb-0"
         >
-          <div className="flex gap-2">
-            {codingIcons.map((code, index) => (
-              <motion.span
-                key={index}
-                animate={{
-                  rotateY: [0, 360],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: index * 0.3,
-                  ease: "easeInOut",
-                }}
-                className="text-lg md:text-xl"
-                style={{ color: code.color }}
-              >
-                <code.icon />
-              </motion.span>
-            ))}
-          </div>
-          Vranda Garg
+          <motion.div whileHover={{ rotate: 10 }} className="mr-2">
+            <RiCodeSSlashLine className="text-amber-400 text-xl" />
+          </motion.div>
+          <motion.h2 className="text-lg font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+            Vranda Garg
+          </motion.h2>
           <motion.span
             initial={{ scale: 0.8 }}
             animate={{
@@ -188,92 +112,61 @@ function Footer() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="inline-block"
+            className="inline-block ml-1.5"
           >
-            <GoHeartFill className="text-red-500" />
+            <GoHeartFill className="text-red-500 text-sm" />
           </motion.span>
-        </motion.h1>
+        </motion.div>
 
-        <div className="flex flex-col items-center gap-5">
-          <motion.div
-            variants={socialContainerVariants}
-            initial="hidden"
-            animate="show"
-            className="flex gap-5"
-          >
-            {socials.map((social, index) => (
+        {/* Social Links */}
+        <div className="flex items-center gap-3">
+          {socials.map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noreferrer"
+              custom={social.delay}
+              variants={socialItemVariants}
+              initial="hidden"
+              animate="show"
+              whileHover="hover"
+              className="relative group"
+              aria-label={social.label}
+            >
               <motion.div
-                key={index}
-                className="relative group"
-                variants={socialItemVariants}
-                initial="initial"
-                animate="animate"
-                whileHover="hover"
-                custom={social.delay}
+                whileHover={{
+                  scale: 1.15,
+                  boxShadow: `0 4px 12px ${social.bgColor}40`,
+                }}
+                className="p-2 rounded-lg flex items-center justify-center"
+                style={{
+                  backgroundColor: social.bgColor,
+                  color: social.color,
+                }}
               >
-                <motion.a
-                  href={social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="relative text-2xl block p-3 rounded-xl"
-                  variants={floatingAnimation}
-                  initial="initial"
-                  animate="animate"
-                  style={{
-                    backgroundColor: social.bgColor,
-                    color: social.color,
-                    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
-                  }}
-                  whileHover={{
-                    scale: 1.2,
-                    y: -5,
-                    boxShadow: `0 6px 20px ${social.bgColor}40`,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                >
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.1],
-                      rotate: [-5, 5],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <social.icon />
-                  </motion.div>
-                </motion.a>
-                <motion.span
-                  initial={{ opacity: 0, y: 10 }}
-                  whileHover={{ opacity: 1, y: 0 }}
-                  className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 
-                           text-xs text-[#FAFAF9]/70 whitespace-nowrap 
-                           bg-[#1c1c1c]/90 px-2 py-1 rounded"
-                >
-                  {social.url.includes("github")
-                    ? "GitHub"
-                    : social.url.includes("linkedin")
-                    ? "LinkedIn"
-                    : social.url.includes("instagram")
-                    ? "Instagram"
-                    : "Email"}
-                </motion.span>
+                <social.icon className="text-sm" />
               </motion.div>
-            ))}
-          </motion.div>
-
-          <p className="text-[#FAFAF9] text-sm font-semibold tracking-wide">
-            &copy; {new Date().getFullYear()} All rights reserved.
-          </p>
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                whileHover={{ opacity: 1, y: 0 }}
+                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 
+                         text-xs text-zinc-400 whitespace-nowrap 
+                         bg-zinc-800/90 px-1.5 py-0.5 rounded text-center"
+              >
+                {social.label}
+              </motion.span>
+            </motion.a>
+          ))}
         </div>
       </footer>
+
+      {/* Copyright */}
+      <div className="bg-zinc-950/10 py-2 text-center">
+        <p className="text-zinc-400 text-xs">
+          &copy; {new Date().getFullYear()} All rights reserved
+        </p>
+      </div>
     </motion.div>
   );
 }

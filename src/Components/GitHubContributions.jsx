@@ -57,6 +57,11 @@ const GitHubHeatmap = () => {
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileTap={{ scale: 0.95 }}
+      viewport={{ once: true }}
+      whileFocus={{ scale: 1.05 }}
       whileHover={{
         scale: 1.02,
         rotate: 0.1,
@@ -66,7 +71,7 @@ const GitHubHeatmap = () => {
         damping: 10,
         stiffness: 100,
       }}
-      className="max-w-full p-2 my-3.5  md:p-9 mx-1 md:mx-auto  border bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg"
+      className="max-w-full z-10 p-2 my-3.5  md:p-9 mx-1 md:mx-auto  border bg-zinc-950/20 border-[#FAF7E7]/20 rounded-lg"
     >
       <h2 className="text-left text-[#EB9F33] text-lg md:text-2xl font-semibold mb-4">
         GitHub Contributions

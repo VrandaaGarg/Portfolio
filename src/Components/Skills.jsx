@@ -130,13 +130,40 @@ const skills = [
   },
 ];
 const Skills = () => {
+  // Animation variants for staggered animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 24 },
+    },
+  };
+
+  // Floating animation elements
+  const floatingElements = Array(5).fill(null);
+
   return (
     <div
       id="Skills"
       className="bg-zinc-900 min-h-screen w-full overflow-hidden"
     >
-      <div className="rounded-4xl min-h-screen  overflow-hidden relative bg-zinc-800 py-24">
-        <TbLineDotted className="text-amber-300 rotate-12 text-3xl absolute top-10 right-14 " />
+      <div className="rounded-b-4xl md:rounded-4xl min-h-screen overflow-hidden relative bg-zinc-800 py-16 sm:py-20 md:py-24">
+        {/* Decorative elements */}
+        <TbLineDotted className="text-amber-300 rotate-12 text-2xl sm:text-3xl absolute top-10 right-10 sm:right-14" />
+
+        {/* Animated background circles */}
         <motion.div
           initial={{ rotate: 0, scale: 0.9 }}
           animate={{ rotate: 360, scale: 1 }}
@@ -146,7 +173,7 @@ const Skills = () => {
             repeatType: "reverse",
             ease: "linear",
           }}
-          className="h-64 w-64 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -top-7 -right-24"
+          className="h-48 sm:h-64 w-48 sm:w-64 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -top-7 -right-24"
         ></motion.div>
 
         <motion.div
@@ -158,9 +185,44 @@ const Skills = () => {
             repeatType: "reverse",
             ease: "linear",
           }}
-          className="h-80 w-80 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -bottom-7 -left-24"
+          className="h-60 sm:h-80 w-60 sm:w-80 bg-gradient-to-br from-amber-200 to-zinc-900 border border-yellow-300 opacity-5 rounded-full absolute -bottom-7 -left-24"
         ></motion.div>
 
+        {/* Floating particles */}
+        {floatingElements.map((_, index) => (
+          <motion.div
+            key={`particle-${index}`}
+            initial={{
+              x: Math.random() * 100 - 50,
+              y: Math.random() * 100 - 50,
+              opacity: 0.1,
+              scale: Math.random() * 0.5 + 0.5,
+            }}
+            animate={{
+              x: Math.random() * 200 - 100,
+              y: Math.random() * 200 - 100,
+              opacity: [0.1, 0.3, 0.1],
+              scale: [
+                Math.random() * 0.5 + 0.5,
+                Math.random() * 0.8 + 0.7,
+                Math.random() * 0.5 + 0.5,
+              ],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+            className={`absolute w-2 h-2 rounded-full bg-amber-400/30`}
+            style={{
+              left: `${Math.random() * 90 + 5}%`,
+              top: `${Math.random() * 90 + 5}%`,
+            }}
+          />
+        ))}
+
+        {/* Rotating circle element */}
         <motion.div
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
@@ -169,53 +231,128 @@ const Skills = () => {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute bottom-10 left-14"
-          style={{ display: "inline-block" }} // ensures the rotation is centered
+          className="absolute bottom-10 left-14 hidden sm:block"
+          style={{ display: "inline-block" }}
         >
-          <TbCircleDotted className="text-amber-300/55 text-5xl" />
+          <TbCircleDotted className="text-amber-300/55 text-4xl sm:text-5xl" />
         </motion.div>
-        <h1 className="text-3xl   md:text-5xl pb-12 text-center  font-semibold text-amber-300">
-          <span className="relative bg-clip-text text-transparent  bg-gradient-to-r from-amber-500 to-amber-300">
+
+        {/* Skills header with animations */}
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-5xl pb-8 sm:pb-12 text-center font-semibold text-amber-300"
+        >
+          <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-300">
             Skills{" "}
             <motion.span
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="ml-2 -top-6 -right-14 absolute"
+              className="ml-2 -top-6 -right-10 sm:-right-14 absolute"
             >
-              <WiStars className=" text-amber-100 text-5xl" />
+              <WiStars className="text-amber-100 text-4xl sm:text-5xl" />
             </motion.span>
           </span>
-        </h1>
-        <div className="flex justify-center items-center">
-          <div className=" grid grid-cols-2 md:grid-cols-5 align-middle gap-2 px-11 max-w-5xl justify-center items-center">
+        </motion.h1>
+
+        {/* Skills grid with improved responsiveness */}
+        <div className="flex justify-center items-center px-3 sm:px-6">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 px-4 sm:px-8 md:px-11 max-w-5xl justify-center items-center"
+          >
             {skills.map((skill, index) => (
               <motion.div
-                whileHover={{ scale: 1.02, x: -2, y: -2, rotate: 2 }}
+                variants={itemVariants}
+                whileHover={{
+                  scale: 1.05,
+                  x: -2,
+                  y: -2,
+                  rotate: 2,
+                  boxShadow:
+                    "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                }}
                 whileTap={{ scale: 0.98, rotate: -2 }}
                 key={index}
                 transition={{ type: "spring", stiffness: 220, damping: 16 }}
-                style={{
-                  zIndex: 2,
-                }}
-                className="flex  items-center justify-start h-full -bg-linear-60 via-zinc-900 from-zinc-800  to-zinc-900 backdrop-blur-md border border-yellow-400/40 rounded-xl p-2"
+                style={{ zIndex: 2 }}
+                className="flex items-center justify-start h-full bg-gradient-to-br from-zinc-800/80 to-zinc-900/90 backdrop-blur-md border border-yellow-400/40 rounded-xl p-2 sm:p-3"
               >
                 <motion.div
-                  whileHover={{ scale: 1.13, rotate: 8 }}
+                  whileHover={{
+                    scale: 1.13,
+                    rotate: 8,
+                    boxShadow: "0 0 10px rgba(255, 194, 13, 0.3)",
+                  }}
                   transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                  className="text-white text-xl rounded-xl  flex items-center justify-center w-12 h-12 mr-4 bg-white/10 backdrop-blur-md border border-white/10 shadow-inner"
+                  className="text-white text-lg sm:text-xl rounded-xl flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mr-3 sm:mr-4 bg-white/10 backdrop-blur-md border border-white/10 shadow-inner"
                   style={{
                     color: skill.bgColor,
                   }}
                 >
-                  {skill.icon}
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 5, 0, -5, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                      delay: (index * 0.1) % 2,
+                    }}
+                  >
+                    {skill.icon}
+                  </motion.div>
                 </motion.div>
-                <span className="text-white font-semibold text-base">
+                <span className="text-white font-semibold text-sm sm:text-base">
                   {skill.name}
                 </span>
+
+                {/* Subtle shine effect on hover */}
+                <motion.div
+                  initial={{ opacity: 0, width: "10%" }}
+                  whileHover={{
+                    opacity: 0.1,
+                    width: "100%",
+                    transition: { duration: 0.3 },
+                  }}
+                  className="absolute bottom-0 left-0 h-full bg-gradient-to-r from-transparent via-amber-200/20 to-transparent rounded-xl pointer-events-none"
+                />
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
+
+        {/* Bottom decorative element */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-8 sm:mt-12"
+        >
+          <motion.div
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.5, 0.8, 0.5],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="text-amber-400/50"
+          >
+            <IoSparkles className="text-2xl sm:text-3xl" />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

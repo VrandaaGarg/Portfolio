@@ -30,7 +30,7 @@ const experience = [
     role: "Webmaster",
     duration: "june 2024 - April 2025",
     description:
-      "As the Webmaster of Randomize, I oversee all frontend-related workshops, empowering members with the latest web development technologies. I also manage and maintain the club's website, ensuring a seamless and engaging online presence for our community.",
+      "As Webmaster at Randomize, I lead frontend workshops and manage the club website, keeping our community’s online presence seamless and up to date.",
     technologies: ["React", "Tailwind CSS", "Javascript", "Github"],
     logo: "/Randomize.ico",
     left: false,
@@ -82,7 +82,19 @@ export default function Experience() {
     <div className="bg-zinc-900">
       <div id="Experience" className="bg-zinc-800 rounded-4xl py-16">
         <div className="max-w-7xl relative mx-auto px-4">
-          <HiAcademicCap className="text-amber-300/25  rotate-12 text-3xl absolute top-10 right-14 " />
+          <motion.div
+            animate={{
+              opacity: [0.5, 0.8, 0.5],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className=""
+          >
+            <HiAcademicCap className="text-amber-300/25  rotate-12 text-3xl absolute top-10 right-14 " />
+          </motion.div>
           <motion.div
             initial={{ rotate: 0, scale: 0.9 }}
             animate={{ rotate: 360, scale: 1 }}
@@ -162,7 +174,7 @@ export default function Experience() {
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-amber-300/30 via-amber-400/50 to-amber-300/30"></div>
 
             {experience.map((exp, index) => (
-              <div key={index} className="mb-16 relative">
+              <div key={index} className="mb-28 relative">
                 {/* Timeline node/circle */}
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}

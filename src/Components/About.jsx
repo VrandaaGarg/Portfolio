@@ -8,35 +8,28 @@ import { Link } from "react-router-dom";
 import LazyImage from "./LazyImage";
 import { MdArrowForward } from "react-icons/md";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import { useScroll } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 const texts = [
   "Full Stack Developer.",
   "Backend Enthusiast.",
-  "Video Editor.",
-  "Lifelong Learner.",
+  "Frontend Developer.",
+  "Web Developer.",
 ];
+import { IoMdContacts } from "react-icons/io";
+
 function About() {
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
-
-  // 3) The "displayed" substring (what actually shows on screen):
-
-  // 4) How many characters of the current string have been typed so far:
   const [charIndex, setCharIndex] = useState(0);
-
-  // 5) Whether we are currently deleting instead of typing:
 
   useEffect(() => {
     let timeoutId;
-
-    // The full string we want to type/delete in this cycle:
     const fullText = texts[textIndex];
 
     if (!isDeleting && charIndex < fullText.length) {
-      // Typing phase: add one character
       timeoutId = setTimeout(() => {
         setDisplayText(fullText.slice(0, charIndex + 1));
         setCharIndex((prev) => prev + 1);
@@ -48,9 +41,7 @@ function About() {
         setCharIndex((prev) => prev - 1);
       }, 50); // deleting is faster: 50ms per character
     } else {
-      // Either we just finished typing the entire string, or finished deleting it:
       if (!isDeleting && charIndex === fullText.length) {
-        // Pause for a moment after fully typing
         timeoutId = setTimeout(() => {
           setIsDeleting(true);
         }, 1000); // hold the full string on‐screen for 1 second
@@ -68,9 +59,8 @@ function About() {
 
   // Background animation variants
   const bgVariants = {
-    initial: { opacity: 0, scale: 0.8 },
+    initial: { scale: 0.8 },
     animate: {
-      opacity: [0.2, 0.4, 0.2],
       scale: [1, 1.05, 1],
       transition: {
         duration: 8,
@@ -82,10 +72,10 @@ function About() {
 
   // Quote and stats card variants
   const cardVariants = {
-    offscreen: { y: 50, opacity: 0 },
+    offscreen: { y: 50 },
     onscreen: {
       y: 0,
-      opacity: 1,
+
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -106,7 +96,7 @@ function About() {
   return (
     <div
       id="Home"
-      className="relative min-h-screen bg-zinc-900 w-full pt-12 sm:pt-16 md:pt-24 pb-16 sm:pb-24 overflow-hidden"
+      className="relative min-h-screen bg-zinc-900 w-full pt-28 px-6 pb-16 sm:pb-24 overflow-hidden"
     >
       {/* Animated background elements */}
       <motion.div
@@ -209,16 +199,21 @@ function About() {
         {/* Left card */}
         <motion.div
           variants={cardVariants}
-          initial="offscreen"
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.3 }}
-          className="p-5 sm:p-8 w-full md:w-1/3"
+          className="p-2 md:p-5 sm:p-8 w-full md:w-1/3"
         >
           <FaQuoteLeft className="text-amber-400 text-xl sm:text-2xl mb-3 sm:mb-4" />
           <p className="text-xs md:text-base text-zinc-300">
-            Experienced in creating responsive and interactive user interfaces
-            using React, Tailwind CSS, and Framer Motion. Passionate about
-            crafting beautiful and intuitive web experiences.
+            Full-stack developer experienced in building responsive, interactive
+            user interfaces and seamless web applications. I’m passionate about
+            transforming ideas into beautiful, intuitive digital experiences.
           </p>
         </motion.div>
 
@@ -228,7 +223,7 @@ function About() {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.3 }}
-          className="p-3 sm:p-8 flex md:gap-2.5 flex-col items-end w-full md:w-1/3 "
+          className="sm:p-8 flex md:gap-2.5 flex-col items-end w-full md:w-1/3 "
         >
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
@@ -248,7 +243,7 @@ function About() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="text-zinc-300 text-xl sm:text-3xl"
           >
-            5+ years
+            2+ years
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: 20 }}
@@ -275,23 +270,34 @@ function About() {
         className="w-full sm:w-auto sm:mx-auto px-4 absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center z-20"
       >
         <div className="absolute z-50 flex  sm:flex-row bottom-6 justify-center bg-white p-1.5 rounded-full gap-1.5 w-[90%] sm:w-auto">
-          <Link to="/projects" className="w-full sm:w-auto">
+          <Link
+            offset={-80}
+            smooth={true}
+            duration={500}
+            className="w-full  sm:w-auto"
+          >
             <motion.button
+              onClick={() => {
+                window.scrollTo({
+                  top: document.getElementById("Contact").offsetTop - 80,
+                  behavior: "smooth",
+                });
+              }}
               whileHover={{
                 scale: 1.03,
                 boxShadow: "0 5px 15px rgba(235, 159, 51, 0.4)",
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="flex items-center justify-center gap-2 
+              className="flex items-center justify-center gap-2 cursor-pointer
                        bg-gradient-to-br from-amber-500 to-yellow-400 
                        text-zinc-900 font-bold 
-                       py-2.5 sm:py-3 px-4 sm:px-6 md:px-8 
+                        py-1.5 px-2 md:px-4 md:py-3
                        rounded-full shadow-lg 
                        w-full sm:w-auto"
             >
-              <FaBriefcase className="text-xs sm:text-xl" />
-              <span>Portfolio</span>
+              <IoMdContacts className="text-xs sm:text-xl" />
+              <span>Connect</span>
               <motion.span
                 animate={{ x: [0, 3, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
@@ -312,8 +318,8 @@ function About() {
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             className="flex items-center justify-center gap-2 
-                     bg-zinc-800 text-zinc-100
-                     font-bold py-2.5 sm:py-3 px-4 sm:px-6 md:px-8 
+                     bg-zinc-800 text-zinc-100 md:py-3
+                     font-bold py-1.5 px-2 md:px-4 
                      rounded-full shadow-lg 
                      w-full sm:w-auto"
           >

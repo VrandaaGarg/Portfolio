@@ -9,6 +9,8 @@ import { PiHamburgerFill } from "react-icons/pi";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { RiCompassDiscoverFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import { GiCash } from "react-icons/gi";
+import { RiBrainLine } from "react-icons/ri";
 
 const projects = [
   {
@@ -62,7 +64,8 @@ const projects = [
   {
     name: "FinWise",
     image: "/Finwise.png",
-    icon: <FaProjectDiagram />,
+    icon: <GiCash />,
+    iconColor: "#8EEFA7",
     liveDemo: "https://finwise.ayush-sharma.in",
     codeUrl: "https://github.com/Glucon-D/FinWise",
     description:
@@ -73,7 +76,8 @@ const projects = [
   {
     name: "Intellica",
     image: "/Intellica.png",
-    icon: <FaProjectDiagram />,
+    iconColor: "#9322FE",
+    icon: <RiBrainLine />,
     liveDemo: "https://intellica.ayush-sharma.in/",
     codeUrl: "https://github.com/CyberBoyAyush/intellica",
     description:
@@ -103,7 +107,6 @@ function Projects({ showAll = false }) {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2,
         duration: 0.8,
         type: "spring",
         stiffness: 100,
@@ -124,7 +127,7 @@ function Projects({ showAll = false }) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay: 0.1 },
+      transition: { duration: 0.6 },
     },
   };
 
@@ -147,12 +150,12 @@ function Projects({ showAll = false }) {
   return (
     <div
       id="Projects"
-      className="py-16 md:px-12 lg:px-20 bg-zinc-900 text-white"
+      className="pt-28 py-20 px-7 md:px-12 lg:px-20 bg-zinc-900 text-white"
     >
       <motion.h1
         variants={titleVariants}
         initial="hidden"
-        whileInView="visible"
+        animate="visible" // Change from whileInView to animate
         viewport={{ once: true }}
         className="text-4xl md:text-5xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-300 mb-16"
       >
@@ -173,9 +176,14 @@ function Projects({ showAll = false }) {
             custom={index}
             variants={cardVariants}
             initial="hidden"
-            whileInView="visible"
+            // Use animate for both pages, but with different delay strategies
+            animate="visible"
+            // Keep whileInView for Home page as fallback
+            {...(!showAll && {
+              whileInView: "visible",
+              viewport: { once: true, margin: "-200px" }, // Increased margin
+            })}
             whileHover="hover"
-            viewport={{ once: true, margin: "-100px" }}
             className="bg-gradient-to-br from-[#1c1c1c]/90 to-[#252525]/70 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 border border-zinc-700/30"
           >
             <div
@@ -213,13 +221,13 @@ function Projects({ showAll = false }) {
               </motion.div>
 
               {/* Project Details with enhanced animations */}
-              <div className="md:w-1/2 p-8 flex flex-col justify-between">
+              <div className="md:w-1/2 p-4 md:p-8 flex flex-col justify-between">
                 {/* Header with Icon */}
                 <motion.div
-                  initial={{ x: project.left ? -20 : 20, opacity: 0 }}
+                  initial={{ x: project.left ? -20 : 20 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.5 }}
                   className="flex items-center gap-4 mb-4"
                 >
                   <motion.div
@@ -240,7 +248,7 @@ function Projects({ showAll = false }) {
 
                 {/* Description with fade-in animation */}
                 <motion.p
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -250,22 +258,16 @@ function Projects({ showAll = false }) {
                 </motion.p>
 
                 {/* Tech Stack with staggered animation */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="mb-6"
-                >
+                <motion.div className="mb-6">
                   <p className="text-zinc-300 font-medium mb-3">Tech Stack:</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
                       <motion.span
                         key={idx}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ scale: 0.8 }}
+                        whileInView={{ scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: idx * 0.1 + 0.4 }}
+                        transition={{ duration: 0.3 }}
                         whileHover={{
                           scale: 1.1,
                           backgroundColor: "#FFC20D20",
@@ -281,7 +283,7 @@ function Projects({ showAll = false }) {
 
                 {/* Buttons with enhanced hover effects */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.5 }}
@@ -298,7 +300,7 @@ function Projects({ showAll = false }) {
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                     target="_blank"
-                    className="bg-gradient-to-r from-amber-500 to-amber-400 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                    className="bg-gradient-to-r text-sm md:text-base from-amber-500 to-amber-400 text-black px-3 md:px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                   >
                     Live URL
                   </motion.a>
@@ -312,7 +314,7 @@ function Projects({ showAll = false }) {
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                     target="_blank"
-                    className="bg-[#333] text-white px-6 py-2 flex items-center justify-center rounded-lg font-semibold transition-all duration-300"
+                    className="bg-[#333] text-white px-3 text-sm md:text-base md:px-6 py-2 flex items-center justify-center rounded-lg font-semibold transition-all duration-300"
                   >
                     GitHub <FaGithub className="ml-2" />
                   </motion.a>
@@ -325,14 +327,14 @@ function Projects({ showAll = false }) {
 
       {/* Show All button - only visible when not showing all projects */}
       {!showAll && (
-        <div className="flex justify-end items-center">
+        <div className="flex justify-center items-center">
           <motion.div
             variants={buttonVariants}
             initial="hidden"
-            whileInView="visible"
+            animate="visible" // Change from whileInView to animate
             whileTap="tap"
             viewport={{ once: true }}
-            className="flex justify-center mt-20"
+            className="flex justify-center mt-9 md:mt-20"
           >
             <motion.button
               type="button"
@@ -342,7 +344,7 @@ function Projects({ showAll = false }) {
               animate="visible"
               whileHover="hover"
               whileTap="tap"
-              className="flex items-center justify-center gap-2 py-4 px-8 rounded-xl text-lg font-bold bg-gradient-to-r from-amber-500 to-amber-400 text-zinc-900 shadow-lg shadow-amber-500/20 transition-all duration-300"
+              className="flex items-center justify-center gap-2 py-2.5 md:py-4 px-3.5 md:px-8 rounded-xl text-sm md:text-lg font-bold bg-gradient-to-r from-amber-500 to-amber-400 text-zinc-900 shadow-lg shadow-amber-500/20 transition-all duration-300"
             >
               Show All Projects
               <motion.span
