@@ -107,7 +107,7 @@ const Header = () => {
                      scrolled ? "shadow-lg shadow-black/10" : ""
                    }`}
       >
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12 md:h-16">
           {/* Logo */}
           <motion.div
             variants={logoVariants}

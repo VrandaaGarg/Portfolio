@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html,
+body {
+  @apply bg-zinc-900;
+}
+
 html {
   scroll-behavior: smooth !important;
   scroll-padding-top: 80px; /* Add padding for fixed header */
@@ -57,7 +62,7 @@ body {
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 10px;
-  background: #121212;
+  background: #242424;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -78,7 +83,7 @@ body {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ffc20d #121212;
+  scrollbar-color: #ffc20d #1a1919;
 }
 
 /* Default cursor will be used instead of custom cursor */

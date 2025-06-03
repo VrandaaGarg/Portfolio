@@ -76,7 +76,7 @@ function Footer() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full bg-zinc-950/95 border-t border-zinc-800/50"
+      className="w-full bg-zinc-950/20 border-t border-zinc-800/50"
     >
       <footer className="max-w-5xl mx-auto py-4 px-4 flex flex-col sm:flex-row justify-between items-center">
         {/* Logo and Name */}
@@ -153,7 +153,7 @@ function Footer() {
       </footer>
 
       {/* Copyright */}
-      <div className="bg-zinc-950/10 py-2 text-center">
+      <div className="bg-zinc-950/5 py-2 text-center">
         <p className="text-zinc-400 text-xs">
           &copy; {new Date().getFullYear()} All rights reserved
         </p>

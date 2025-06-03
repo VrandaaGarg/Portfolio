@@ -93,7 +93,7 @@ function About() {
   return (
     <div
       id="Home"
-      className="relative min-h-screen bg-zinc-900 w-full pt-28 px-6 pb-16 sm:pb-24 overflow-hidden"
+      className="relative min-h-screen  bg-zinc-900 w-full pt-20 md:pt-28 px-3.5 pb-16 sm:pb-24 overflow-hidden"
     >
       {/* Animated background elements */}
       <motion.div
@@ -114,7 +114,7 @@ function About() {
       <div className="w-[100%] h-36 md:w-72 md:h-36 lg:w-[35%] lg:h-60 mx-auto absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         {/* Semi-circular background with responsive scaling */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full 
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-36 md:h-48 lg:h-48
                       bg-gradient-to-t from-yellow-300 to-yellow-600 rounded-t-full shadow-md"
         >
           <motion.div
@@ -136,7 +136,7 @@ function About() {
             type: "spring",
             stiffness: 100,
           }}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[400px] sm:h-[450px] md:h-[530px] w-max"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[350px] sm:h-[400px] md:h-[px] w-max"
         >
           <LazyImage
             src="/1.png"
@@ -159,7 +159,7 @@ function About() {
           transition={{ duration: 0.6 }}
           className="mb-3 bg-zinc-800/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full inline-flex items-center"
         >
-          <span className="text-amber-50 text-xs sm:text-sm">Hello!</span>
+          <span className="text-amber-50 text-[14px] sm:text-sm">Hello!</span>
           <motion.span
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -173,7 +173,7 @@ function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl sm:text-4xl md:text-6xl text-zinc-100 font-bold mb-2"
+          className="text-3xl md:text-6xl text-zinc-100 font-bold mb-2"
         >
           <span className="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 text-transparent bg-clip-text">
             Vranda Garg,
@@ -184,7 +184,7 @@ function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-2xl sm:text-3xl md:text-4xl text-zinc-200 font-bold md:mb-6"
+          className="text-lg sm:text-3xl md:text-4xl text-zinc-200 font-bold md:mb-6"
         >
           I'm a {displayText}
           <span className="inline-block w-1 bg-zinc-200 ml-1 animate-blink" />
@@ -192,7 +192,7 @@ function About() {
       </motion.div>
 
       {/* Middle section with responsive layout */}
-      <div className="w-full px-2 sm:px-6 flex flex-col md:flex-row justify-between items-center  sm:gap-10 mb-8 md:mb-0 relative z-10">
+      <div className="w-full px-2 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-5  sm:gap-10 mb-8 md:mb-0 relative z-10">
         {/* Left card */}
         <motion.div
           variants={cardVariants}
@@ -206,8 +206,8 @@ function About() {
           viewport={{ once: true, amount: 0.3 }}
           className="p-2 md:p-5 sm:p-8 w-full md:w-1/3"
         >
-          <FaQuoteLeft className="text-amber-400 text-xl sm:text-2xl mb-3 sm:mb-4" />
-          <p className="text-xs md:text-base text-zinc-300">
+          <FaQuoteLeft className="text-amber-400 text-lg md:text-2xl mb-3 sm:mb-4" />
+          <p className="text-[16px] md:text-base text-zinc-300">
             Full-stack developer experienced in building responsive, interactive
             user interfaces and seamless web applications. I’m passionate about
             transforming ideas into beautiful, intuitive digital experiences.
@@ -230,7 +230,7 @@ function About() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1 * i, duration: 0.3 }}
               >
-                <FaStar className="text-amber-400 text-base md:text-xl sm:text-2xl mb-2 sm:mb-4" />
+                <FaStar className="text-amber-400 text-sm md:text-xl sm:text-2xl mb-2 sm:mb-4" />
               </motion.div>
             ))}
           </div>
@@ -238,7 +238,7 @@ function About() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="text-zinc-300 text-xl sm:text-3xl"
+            className="text-zinc-300 text-sm sm:text-3xl"
           >
             2+ years
           </motion.p>
@@ -246,7 +246,7 @@ function About() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
-            className="text-zinc-300 text-lg sm:text-2xl"
+            className="text-zinc-300 text-sm sm:text-2xl"
           >
             Experience
           </motion.p>
@@ -294,7 +294,7 @@ function About() {
                        w-full sm:w-auto"
             >
               <IoMdContacts className="text-xs sm:text-xl" />
-              <span>Connect</span>
+              <span className="text-xs md:text-base">Connect</span>
               <motion.span
                 animate={{ x: [0, 3, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
@@ -321,7 +321,7 @@ function About() {
                      w-full sm:w-auto"
           >
             <HiDocumentDownload className="text-xs sm:text-xl" />
-            <span>Resume</span>
+            <span className="text-xs md:text-base">Resume</span>
             <motion.span
               animate={{ x: [0, 3, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, delay: 0.2 }}

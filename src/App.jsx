@@ -70,7 +70,7 @@ function App() {
           {/* Text animation */}
           <div className="h-8 mt-8 overflow-hidden">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0.1, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
               className="flex"
@@ -78,7 +78,7 @@ function App() {
               {loadingText.split("").map((char, index) => (
                 <motion.span
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0.1, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     delay: 0.8 + index * 0.1,
@@ -99,7 +99,7 @@ function App() {
         {/* Progress bar */}
         <motion.div
           className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-zinc-800 rounded-full overflow-hidden"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0.1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >

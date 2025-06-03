@@ -256,13 +256,13 @@ const Skills = () => {
         </motion.h1>
 
         {/* Skills grid with improved responsiveness */}
-        <div className="flex justify-center items-center px-3 sm:px-6">
+        <div className="flex justify-center items-center px-2.5">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 px-4 sm:px-8 md:px-11 max-w-5xl justify-center items-center"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 px-2 md:px-11 max-w-5xl justify-center items-center"
           >
             {skills.map((skill, index) => (
               <motion.div
