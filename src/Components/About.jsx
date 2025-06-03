@@ -111,7 +111,7 @@ function About() {
       />
 
       {/* Profile image container - improved responsive sizing */}
-      <div className="hidden md:block w-[100%] h-36 md:w-72 md:h-36 lg:w-[35%] lg:h-60 mx-auto absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+      <div className="block w-[100%] h-36 md:w-72 md:h-36 lg:w-[35%] lg:h-60 mx-auto absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         {/* Semi-circular background with responsive scaling */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-36 md:h-48 lg:h-48
@@ -207,7 +207,7 @@ function About() {
           className="p-2 md:p-5 sm:p-8 w-full md:w-1/3"
         >
           <FaQuoteLeft className="text-amber-400 text-lg md:text-2xl mb-3 sm:mb-4" />
-          <p className="text-[16px] md:text-base text-zinc-300">
+          <p className="text-[16px] md:text-xl text-zinc-300">
             Full-stack developer experienced in building responsive, interactive
             user interfaces and seamless web applications. I’m passionate about
             transforming ideas into beautiful, intuitive digital experiences.
@@ -259,41 +259,6 @@ function About() {
         </motion.div>
       </div>
 
-      {/* Profile image container - improved responsive sizing */}
-      <div className="w-[100%] h-fit  z-10">
-        {/* Semi-circular background with responsive scaling */}
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-36 md:h-48 lg:h-48
-                      bg-gradient-to-t from-yellow-300 to-yellow-600 rounded-t-full shadow-md"
-        >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="absolute inset-0 bg-gradient-to-t from-amber-300 to-amber-400/90 rounded-t-full 
-                     shadow-inner mix-blend-overlay"
-          />
-        </div>
-
-        {/* Profile image with enhanced animation */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0, y: 20 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.6,
-            type: "spring",
-            stiffness: 100,
-          }}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[350px] sm:h-[400px] md:h-[px] w-max"
-        >
-          <LazyImage
-            src="/1.png"
-            alt="Vranda Garg"
-            className="object-cover w-full h-full"
-          />
-        </motion.div>
-      </div>
       {/* Bottom buttons with improved responsive design */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
