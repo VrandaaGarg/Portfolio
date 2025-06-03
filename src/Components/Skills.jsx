@@ -134,8 +134,8 @@ const Skills = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08,
-        delayChildren: 0.3,
+        staggerChildren: 0.02, // Reduced from 0.03
+        delayChildren: 0.05, // Reduced from 0.1
       },
     },
   };
@@ -145,7 +145,7 @@ const Skills = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
+      transition: { type: "spring", stiffness: 500, damping: 25 }, // Increased stiffness for even faster animation
     },
   };
 
@@ -166,7 +166,7 @@ const Skills = () => {
           initial={{ rotate: 0, scale: 0.9 }}
           animate={{ rotate: 360, scale: 1 }}
           transition={{
-            duration: 10,
+            duration: 6, // Reduced from 10
             repeat: Infinity,
             repeatType: "reverse",
             ease: "linear",
@@ -178,7 +178,7 @@ const Skills = () => {
           initial={{ rotate: 0, scale: 0.9 }}
           animate={{ rotate: 360, scale: 1 }}
           transition={{
-            duration: 10,
+            duration: 6, // Reduced from 10
             repeat: Infinity,
             repeatType: "reverse",
             ease: "linear",
@@ -207,7 +207,7 @@ const Skills = () => {
               ],
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: Math.random() * 5 + 5, // Reduced from 10 + 10
               repeat: Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
@@ -225,7 +225,7 @@ const Skills = () => {
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{
-            duration: 10,
+            duration: 6, // Reduced from 10
             repeat: Infinity,
             ease: "linear",
           }}
@@ -239,7 +239,7 @@ const Skills = () => {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }} // Reduced from 0.4
           viewport={{ once: true }}
           className="text-3xl md:text-5xl pb-8 sm:pb-12 text-center font-semibold text-amber-300"
         >
@@ -247,7 +247,7 @@ const Skills = () => {
             Skills{" "}
             <motion.span
               animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 1.5, repeat: Infinity }} // Reduced from 2
               className="ml-2 -top-6 -right-10 sm:-right-14 absolute"
             >
               <WiStars className="text-amber-100 text-4xl sm:text-5xl" />
@@ -299,11 +299,11 @@ const Skills = () => {
                       rotate: [0, 5, 0, -5, 0],
                     }}
                     transition={{
-                      duration: 2,
+                      duration: 1.5, // Reduced from 2
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut",
-                      delay: (index * 0.1) % 2,
+                      delay: (index * 0.05) % 1, // Reduced delay multiplier
                     }}
                   >
                     {skill.icon}
@@ -332,7 +332,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.3, delay: 0.1 }} // Reduced duration and delay
           viewport={{ once: true }}
           className="flex justify-center mt-8 sm:mt-12"
         >
@@ -342,7 +342,7 @@ const Skills = () => {
               opacity: [0.5, 0.8, 0.5],
             }}
             transition={{
-              duration: 3,
+              duration: 2, // Reduced from 3
               repeat: Infinity,
               repeatType: "reverse",
             }}
