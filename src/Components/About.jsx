@@ -305,7 +305,7 @@ function About() {
           </Link>
 
           <motion.a
-            href="/resume.pdf"
+            href="/VrandaGarg.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{

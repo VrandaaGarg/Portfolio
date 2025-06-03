@@ -186,7 +186,7 @@ const Header = () => {
 
               {/* Resume Button */}
               <motion.a
-                href="/resume.pdf"
+                href="/VrandaGarg.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{
@@ -279,7 +279,7 @@ const Header = () => {
 
             {/* Mobile Resume Button */}
             <motion.a
-              href="/resume.pdf"
+              href="/VrandaGarg.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
