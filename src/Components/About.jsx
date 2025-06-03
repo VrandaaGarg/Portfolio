@@ -136,7 +136,7 @@ function About() {
             type: "spring",
             stiffness: 100,
           }}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[350px] sm:h-[400px] md:h-[px] w-max"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[350px] sm:h-[400px] md:h-[480px] w-max"
         >
           <LazyImage
             src="/1.png"
