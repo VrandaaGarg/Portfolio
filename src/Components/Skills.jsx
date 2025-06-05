@@ -130,7 +130,7 @@ const skills = [
 const Skills = () => {
   // Animation variants for staggered animations
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0.2 },
     visible: {
       opacity: 1,
       transition: {
@@ -141,7 +141,7 @@ const Skills = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0.4, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
