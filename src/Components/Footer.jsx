@@ -45,7 +45,7 @@ function Footer() {
     },
     {
       icon: CiMail,
-      url: "mailto:connect@vrandacodz.xyz",
+      url: "mailto:connect@vrandagarg.in",
       color: "#ffffff",
       bgColor: "#FFC20D",
       label: "Email",
